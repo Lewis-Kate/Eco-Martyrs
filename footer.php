@@ -19,6 +19,7 @@ $container = get_theme_mod( 'understrap_container_type' );
     <a href="">Africa</a>
     <a href="">North America</a>
     <a href="">South America</a>
+	<span>&copy;2021 <a href="https://rampages.us/ecomartyrs/">The Eco Martyrs</a></span>
 </div>
 
 

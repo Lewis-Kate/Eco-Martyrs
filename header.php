@@ -23,6 +23,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
-<h1><a href="https://rampages.us/ecomartyrs/">Eco Martyrs</a></h1>
+<h1><a href="https://rampages.us/ecomartyrs/">The Eco Martyrs</a></h1>
 <img src="/wp-content/themes/eco-martyrs/src/img/globe.svg">
 <h2>Visual and sound artists pay tribute to the fallen from around the globe</h2>
