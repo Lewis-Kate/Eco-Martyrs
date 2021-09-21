@@ -260,14 +260,6 @@ resetValues();
 curr_track.src = track_list[track_index].path;
 curr_track.load();
 
-// Update details of the track
-track_art.style.backgroundImage =
-	"url(" + track_list[track_index].image + ")";
-track_name.textContent = track_list[track_index].name;
-track_artist.textContent = track_list[track_index].artist;
-now_playing.textContent =
-	"PLAYING " + (track_index + 1) + " OF " + track_list.length;
-
 // Set an interval of 1000 milliseconds
 // for updating the seek slider
 updateTimer = setInterval(seekUpdate, 1000);
@@ -275,6 +267,14 @@ updateTimer = setInterval(seekUpdate, 1000);
 // Move to the next track if the current finishes playing
 // using the 'ended' event
 curr_track.addEventListener("ended", nextTrack);
+
+
+// Construct a color withe the given values
+//let bgColor = "rgb(" + red + ", " + green + ", " + blue + ")";
+
+// Set the background to the new color
+//document.body.style.background = bgColor;
+}
 
 // Function to reset all values to their default
 function resetValues() {
