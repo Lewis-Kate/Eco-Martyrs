@@ -1,3 +1,6 @@
-<?php /* Template Name: Show All */ ?>
+<?php /*Template Name: Show All */ ?>
+<?php get_header(); ?>
 
-<h1>Eco Martyrs</h1>
+
+
+<?php get_footer(); ?>
