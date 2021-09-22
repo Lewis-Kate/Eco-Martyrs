@@ -36,6 +36,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	display: flex;
 	flex: row nowrap;
 	padding: .5em;
+	font-family: 'Chonburi', cursive;
 }
 
 .header a{

@@ -14,7 +14,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
 
-<div>
+<div class="footer">
     <a href="">Show All</a>
     <a href="">Africa</a>
     <a href="">North America</a>
@@ -30,5 +30,30 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 </body>
 
+<style>
+    .footer{
+        display: flex;
+        flex-flow: row nowrap;
+}
+
+.footer a{
+		color: white;
+		text-decoration: none;
+		padding-right: .5em;
+	}
+.footer a:hover{
+		color: red;
+		text-decoration: underline;
+	}
+
+.footer p{
+	font-size: 1em;
+	color: #939699;
+    padding-right: .5em;
+}
+</style>
+
+
 </html>
+
 
