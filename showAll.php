@@ -15,7 +15,7 @@
 </head>
 
 <div class="ecoImage">
-    <img src="getImage()">
+    <img src="getFeaturedMedia()">
 </div>
 
 <div class="stats_and_player">

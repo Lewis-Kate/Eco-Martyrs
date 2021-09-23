@@ -5,7 +5,6 @@ body {
 }
 
 /*show all page style*/
-
 .stats_and_player {
     margin: auto;
     width: 60%;
@@ -174,3 +173,6 @@ padding-right: .5em;
 	font-size: 1em;
 	color: #939699;
 }
+
+/*hide WP admin bar*/
+#wpadminbar { display:none !important;}
