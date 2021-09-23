@@ -30,29 +30,3 @@ $container = get_theme_mod( 'understrap_container_type' );
 <p>Visual and sound artists pay tribute to the fallen from around the globe</p>
 </div>
 
-<style>
-
-.header{
-	display: flex;
-	flex: row nowrap;
-	padding: .5em;
-	font-family: 'Chonburi', cursive;
-}
-
-.header a{
-		color: white;
-		text-decoration: none;
-		padding-right: .5em;
-		font-size: 1.2em;
-	}
-.header a:hover{
-		color: red;
-		text-decoration: underline;
-	}
-
-.header p{
-	font-size: 1em;
-	color: #939699;
-}
-
-</style>

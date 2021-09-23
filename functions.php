@@ -42,3 +42,11 @@ if ( class_exists( 'Jetpack' ) ) {
 foreach ( $understrap_includes as $file ) {
 	require_once get_theme_file_path( $understrap_inc_dir . $file );
 }
+
+function load_scripts(){
+	wp_enqueue_script( 'slideshow', get_template_directory_uri(  ) . '/src/js/slideshow.js', array(), '1.0.0', false);
+	wp_enqueue_script( 'audioPlayer', get_template_directory_uri(  ) . '/src/js/audioPlayer.js', array(), '1.0.0', false);
+	wp_enqueue_style( 'styles', get_template_directory_uri(  ) . '/src/style/styles.css', array(), '1.0.0');
+}
+
+add_action( 'wp_enqueue_scripts', 'load_scripts' );
