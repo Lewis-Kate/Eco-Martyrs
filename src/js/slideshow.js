@@ -1,6 +1,6 @@
 let state = {
     posts: [],
-    baseUrl: 'http://multisite.local/eco-marytrs/wp-json/wp/v2/posts',
+    baseUrl: 'https://rampages.us/ecomartyrs/wp-json/wp/v2/posts?_embed=true',
     perPage: '?per_page=10',
     wpFetchHeaders: {
       headers: {
