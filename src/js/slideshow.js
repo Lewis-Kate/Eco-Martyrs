@@ -28,10 +28,8 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/posts?_embed=true')
         }
         return response;
     }).then(function(response) {
-        console.log("ok");
+        console.log(response.json());
     }).catch(function(error) {
         console.log(error);
-    }).then(data => {
-      console.log(data); 
     });
 
