@@ -168,4 +168,4 @@ if (!isNaN(curr_track.duration)) {
 }
 
 // Load the first track in the tracklist
-loadTrack(track_index);
+//loadTrack(track_index);

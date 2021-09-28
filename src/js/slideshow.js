@@ -1,30 +1,37 @@
-let state = {
-    posts: [],
-    baseUrl: 'https://rampages.us/ecomartyrs/wp-json/wp/v2/posts?_embed=true',
-    perPage: '?per_page=10',
-    wpFetchHeaders: {
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Expose-Headers': 'x-wp-total'
-      }
-    }
-  }
+// wp.api.loadPromise.done(function(){
+//   var post = new wp.api.models.Post( { id: 21 } );
+//   post.fetch();
+//   console.log(post);
 
-var post = new wp.api.models.Post( { id: 19 } );
- post.fetch();
+//     // Get a collection of the post's categories (returns a promise)
+//     // Uses _embedded data if available, in which case promise resolves immediately.
+//     post.getCategories().done( function( postCategories ) {
+//       console.log(postCategories);
+//     } );
 
-// Get a collection of the post's categories (returns a promise)
-// Uses _embedded data if available, in which case promise resolves immediately.
-post.getCategories().done( function( postCategories ) {
-  // ... do something with the categories.
-  // The new post has an single Category: Uncategorized
-  console.log( postCategories[0].name );
-  // response -> "Uncategorized"
-} );
+//   // Get a posts featured image Media model.
+//   post.getFeaturedMedia().done(function(featuredmedia){
+//   console.log('called');
+//   console.log(featuredmedia);
+//   });
 
-// Get a posts featured image Media model.
-post.getFeaturedMedia().done( function( image ){
-  // ... do something with image
-  console.log( image );
-} );
- 
+// })
+
+
+//fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/posts?_embed=true')
+//.then(response => response.json())
+//.then(data => console.log(data));
+fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/posts?_embed=true')
+    .then(function(response) {
+        if (!response.ok) {
+            throw Error("Failure to Load");
+        }
+        return response;
+    }).then(function(response) {
+        console.log("ok");
+    }).catch(function(error) {
+        console.log(error);
+    }).then(data => {
+      console.log(data); 
+    });
+
