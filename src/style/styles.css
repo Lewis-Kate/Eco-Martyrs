@@ -5,6 +5,17 @@ body {
 }
 
 /*show all page style*/
+
+.showAll{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+}
+
+img{
+    width: 50%;
+}
+
 .stats_and_player {
     margin: auto;
     width: 60%;
@@ -15,6 +26,7 @@ body {
 .ecoStats p {
     font-weight: bold;
     letter-spacing: 1px;
+    margin-left: .5em;
 }
 
 .audioPlayer{
@@ -123,9 +135,6 @@ i.fa-step-backward {
     cursor: pointer;
 }
 
-.ecoImage {
-    float: right;
-}
 /*footer styles*/
 .footer{
     display: flex;

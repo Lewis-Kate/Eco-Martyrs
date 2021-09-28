@@ -14,10 +14,7 @@
         rel="stylesheet">
 </head>
 
-<div class="ecoImage">
-    <img src="">
-</div>
-
+<div class="showAll">
 <div class="stats_and_player">
     <div class="ecoStats">
         <p>Ecomartyr Name:</p>
@@ -26,7 +23,7 @@
         <p>Portrait Artist:</p>
         <p>Sound Artists:</p>
         <p>Ecomartyr Bio:</p>
-        <p>Links for further reading:</p>
+        <p>Links for further reading:</p><br />
     </div>
 
     <div class="audioPlayer">
@@ -60,6 +57,14 @@
             </div>
         </div>
     </div>
+    </div>
+
+  
+   
+            <img id="featuredImage">
+       
+
+ 
 </div>
 
 

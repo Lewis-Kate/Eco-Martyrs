@@ -33,3 +33,15 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/posts?_embed=true')
         console.log(error);
     });
 
+
+//fetch the image
+  const image = document.getElementById('featuredImage');
+  fetch('http://multisite.local/eco-martyrs/wp-content/uploads/sites/7/2021/04/4-Eduardo-Maxciel-Pereira-Dos-Santos.jpg')
+  .then(response => response.blob())
+  .then(blob => {
+    const objectURL = URL.createObjectURL(blob);
+    image.src = objectURL;
+  });
+
+  console.log(image);
+
