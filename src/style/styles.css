@@ -12,15 +12,13 @@ body {
     justify-content: flex-end;
 }
 
-img{
+#featuredImage{
     width: 50%;
 }
 
 .stats_and_player {
     margin: auto;
     width: 60%;
-    padding-top: 5em;
-    padding-bottom: 5em;
 }
 
 .ecoStats p {
@@ -161,10 +159,10 @@ padding-right: .5em;
 /*header styles*/
 
 .header{
-	display: flex;
-	flex: row nowrap;
-	padding: .5em;
+	padding-left: 0.5em;
 	font-family: 'Chonburi', cursive;
+    line-height: 0 !important;
+    /* width: 50%; */
 }
 
 .header a{

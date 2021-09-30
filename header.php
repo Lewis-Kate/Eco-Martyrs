@@ -25,8 +25,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <?php do_action( 'wp_body_open' ); ?>
 
 <div class="header">
-<p><a href="https://rampages.us/ecomartyrs/">The Eco Martyrs</p>
-<img src="/wp-content/themes/eco-martyrs/src/img/globe.svg"></a>
+<p><a href="https://rampages.us/ecomartyrs/">The Eco Martyrs <img src="/wp-content/themes/eco-martyrs/src/img/globe.svg"></a></p>
 <p>Visual and sound artists pay tribute to the fallen from around the globe</p>
 </div>
 

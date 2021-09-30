@@ -16,7 +16,7 @@
 
 <div class="showAll">
 <div class="stats_and_player">
-    <div class="ecoStats">
+   <!--<div id="ecoStats">
         <p>Ecomartyr Name:</p>
         <p>Country:</p>
         <p>Date of Death:</p>
@@ -24,7 +24,7 @@
         <p>Sound Artists:</p>
         <p>Ecomartyr Bio:</p>
         <p>Links for further reading:</p><br />
-    </div>
+    </div>-->
 
     <div class="audioPlayer">
         <div class="player">
