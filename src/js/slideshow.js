@@ -25,6 +25,7 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/posts?_embed=true')
     //EcoMartyr Name
       const ecoMartyrName = posts.find(post => post.id === 21);
       let name = document.getElementById("ecoMartyrName");
+      name.style.color = 'white';
       name.innerHTML = ecoMartyrName.title.rendered;
      //console.log(ecoMartyrName.title);
 
@@ -32,28 +33,17 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/posts?_embed=true')
     //  const ecoMartyrCountry = posts.find(post => post.id === 21);
     //  console.log(ecoMartyrCountry);
     //  let country = document.getElementById("ecoMartyrCountry");
+    //  country.style.color = 'white';
     //  country.innerHTML = ecoMartyrCountry.categories;
 
 
     //Featured Image
     const featuredImage = posts.find(post => post.id === 21);
-    console.log(featuredImage);
     let image = document.getElementById("featuredImage");
-    image.innerHTML = featuredImage._links.featuredmedia;
-    console.log(featuredImage._links.wp.featuredmedia);
-  }
+    image.src = 'http://multisite.local/eco-martyrs/wp-content/uploads/sites/7/2021/04/4-Eduardo-Maxciel-Pereira-Dos-Santos.jpg';
+   }
 
 
-            
-
-// //fetch the image from the API
-//   const image = document.getElementById('featuredImage');
-//   fetch('http://multisite.local/eco-martyrs/wp-content/uploads/sites/7/2021/04/4-Eduardo-Maxciel-Pereira-Dos-Santos.jpg')
-//   .then(response => response.blob())
-//   .then(blob => {
-//     const objectURL = URL.createObjectURL(blob);
-//     image.src = objectURL;
-//   });
 
 
 
