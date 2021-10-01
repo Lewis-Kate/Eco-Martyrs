@@ -16,15 +16,15 @@
 
 <div class="showAll">
 <div class="stats_and_player">
-   <!--<div id="ecoStats">
-        <p>Ecomartyr Name:</p>
-        <p>Country:</p>
+   <div id="ecoStats">
+        <p>Ecomartyr Name: <span id="ecoMartyrName"></span></p>
+        <p>Country:</p> <span id="ecoMartyrCountry"></span>
         <p>Date of Death:</p>
         <p>Portrait Artist:</p>
         <p>Sound Artists:</p>
         <p>Ecomartyr Bio:</p>
         <p>Links for further reading:</p><br />
-    </div>-->
+    </div>
 
     <div class="audioPlayer">
         <div class="player">
