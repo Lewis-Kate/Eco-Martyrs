@@ -18,7 +18,7 @@
 <div class="stats_and_player">
    <div id="ecoStats">
         <p>Ecomartyr Name: <span id="ecoMartyrName"></span></p>
-        <p>Country:</p> <span id="ecoMartyrCountry"></span>
+        <p>Country: <span id="ecoMartyrCountry"></span> </p>
         <p>Date of Death:</p>
         <p>Portrait Artist:</p>
         <p>Sound Artists:</p>
