@@ -25,39 +25,33 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/ecomartyrs?_embed=true'
     //EcoMartyr Name 
       const post = posts[arrayIndex]
       let name = document.getElementById("ecoMartyrName");
-      name.style.color = 'white';
+      name.style.color = '#F9F6EE';
       name.innerHTML = post.title.rendered;
-
 
     //Country
      let country = document.getElementById("ecoMartyrCountry");
-     country.style.color = 'white';
+     country.style.color = '#F9F6EE';
      country.innerHTML = post.acf.country;
 
      //Date of Death
      let dateOfDeath = document.getElementById("dateOfDeath");
-     dateOfDeath.style.color = 'white';
+     dateOfDeath.style.color = '#F9F6EE';
      dateOfDeath.innerHTML = post.acf.date_of_death;
      
      //Portrait Artist
      let portraitArtist = document.getElementById("portraitArtist");
-     portraitArtist.style.color = 'white';
+     portraitArtist.style.color = '#F9F6EE';
      portraitArtist.innerHTML = post.acf.portrait_artist;
 
      //Sound Artist
      let soundArtist = document.getElementById("soundArtist");
-     soundArtist.style.color = 'white';
+     soundArtist.style.color = '#F9F6EE';
      soundArtist.innerHTML = post.acf.sound_artist;
 
      //Ecomartyr Bio
      let ecomartyrBio = document.getElementById("ecomartyrBio");
-     ecomartyrBio.style.color = 'white';
+     ecomartyrBio.style.color = '#F9F6EE';
      ecomartyrBio.innerHTML = post.acf.ecomartyr_bio;
-
-     //Additional Links
-     let additionalLinks = document.getElementById("additionalLinks");
-     additionalLinks.style.color = 'white';
-     additionalLinks.innerHTML = post.acf.additional_links;
 
     //Featured Image
     let image = document.getElementById("featuredImage");

@@ -21,10 +21,14 @@ body {
     width: 60%;
 }
 
-.ecoStats p {
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin-left: .5em;
+#additionalLinks{
+    color: #87CEEB;
+    text-decoration: none;
+}
+
+#additionalLinks:hover{
+    color: red;
+    text-decoration: underline;
 }
 
 .audioPlayer{
@@ -95,7 +99,7 @@ align items in a horizontal direction */
     appearance: none;
     width: 15px;
     height: 15px;
-    background: white;
+    background: #F9F6EE;
     cursor: pointer;
     border-radius: 50%;
 }
@@ -140,7 +144,7 @@ i.fa-step-backward {
 }
 
 .footer a{
-    color: white;
+    color: #F9F6EE;
     text-decoration: none;
     padding-right: .5em;
 }
@@ -166,7 +170,7 @@ padding-right: .5em;
 }
 
 .header a{
-		color: white;
+		color: #F9F6EE;
 		text-decoration: none;
 		padding-right: .5em;
 		font-size: 1.2em;
@@ -186,7 +190,9 @@ padding-right: .5em;
 
 /*button styles*/
 button{
-    height: 40%;
-    padding: 1em;
-    margin: 1em;
+    height: 60%;
+    padding: .5em;
+    margin: .5em;
+    background-color: #1e2d32;
+    color: red;
 }

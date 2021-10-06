@@ -23,8 +23,8 @@
         <p>Date of Death: <span id="dateOfDeath"></p>
         <p>Portrait Artist: <span id="portraitArtist"></p>
         <p>Sound Artists: <span id="soundArtist"></p>
-        <p>Ecomartyr Bio: <span id="ecomartyrBio"></p>
-        <p>Links for further reading: <a id="additionalLinks"></a></p><br />
+        <p>Ecomartyr Bio: <span id="ecomartyrBio"></span></p>
+        <p>Links for further reading: <a href='${post.acf.additional_links}'id="additionalLinks">Brazilian Official Who Fought to Protect the Amazon ‘Assassinated’ in Front of His Family</a></p><br />
     </div>
 
     <div class="audioPlayer">
