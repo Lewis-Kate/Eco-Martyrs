@@ -183,3 +183,10 @@ padding-right: .5em;
 
 /*hide WP admin bar*/
 #wpadminbar { display:none !important;}
+
+/*button styles*/
+button{
+    height: 40%;
+    padding: 1em;
+    margin: 1em;
+}

@@ -52,3 +52,27 @@ function load_scripts(){
 
 add_action( 'wp_enqueue_scripts', 'load_scripts' );
 
+
+// Our custom post type function
+function create_posttype() {
+ 
+    register_post_type( 'ecomartyrs',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Ecomartyrs' ),
+                'singular_name' => __( 'Ecomartyr' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'ecomartyrs'),
+            'show_in_rest' => true,
+			'menu_icon' => 'dashicons-admin-site',
+			//'supports' => array( 'thumbnail' )
+ 
+        )
+    );
+	add_post_type_support( 'ecomartyrs', 'thumbnail' );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_posttype' );

@@ -15,15 +15,16 @@
 </head>
 
 <div class="showAll">
+<button onclick="showPreviousSlide()"><i class="fas fa-chevron-left"></i></button>
 <div class="stats_and_player">
    <div id="ecoStats">
         <p>Ecomartyr Name: <span id="ecoMartyrName"></span></p>
         <p>Country: <span id="ecoMartyrCountry"></span> </p>
-        <p>Date of Death:</p>
-        <p>Portrait Artist:</p>
-        <p>Sound Artists:</p>
-        <p>Ecomartyr Bio:</p>
-        <p>Links for further reading:</p><br />
+        <p>Date of Death: <span id="dateOfDeath"></p>
+        <p>Portrait Artist: <span id="portraitArtist"></p>
+        <p>Sound Artists: <span id="soundArtist"></p>
+        <p>Ecomartyr Bio: <span id="ecomartyrBio"></p>
+        <p>Links for further reading: <a id="additionalLinks"></a></p><br />
     </div>
 
     <div class="audioPlayer">
@@ -62,6 +63,10 @@
   
    
             <img id="featuredImage">
+
+           
+            <button onclick="showNextSlide()"><i class="fas fa-chevron-right"></i></button>
+            
        
 
  
