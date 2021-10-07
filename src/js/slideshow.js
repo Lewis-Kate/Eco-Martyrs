@@ -26,7 +26,7 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/ecomartyrs?_embed=true'
       const post = posts[arrayIndex]
       let name = document.getElementById("ecoMartyrName");
       name.style.color = '#F9F6EE';
-      name.innerHTML = post.title.rendered;
+      name.innerHTML = post.acf.title;
 
     //Country
      let country = document.getElementById("ecoMartyrCountry");
@@ -55,12 +55,26 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/ecomartyrs?_embed=true'
 
     //Featured Image
     let image = document.getElementById("featuredImage");
-    image.src = post._embedded['wp:featuredmedia']['0'].source_url;
-  
+    image.src = post._embedded['wp:featuredmedia']['0'].source_url;  
 
    }
 
+   //Show Next Slide
+  function showNextSlide() {
+    //increment currentSlide and then call renderView again with the new value of currentSlide
+    let x = currentSlide;
+    let nextSlide = ++x;
+    renderView(nextSlide);
+    //console.log(nextSlide);
+    //console.log(currentSlide);
+  }
 
-
+  //Show Previous Slide
+  function showPreviousSlide() {
+    let x = currentSlide;
+    let previousSlide = --x;
+    renderView(previousSlide);
+    //console.log(previousSlide);
+  }
 
 
