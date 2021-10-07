@@ -72,9 +72,9 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/ecomartyrs?_embed=true'
   //Show Previous Slide
   function showPreviousSlide() {
     let x = currentSlide;
-    let previousSlide = --x;
+    let previousSlide = x--;
     renderView(previousSlide);
-    //console.log(previousSlide);
+    console.log(previousSlide);
   }
 
 
