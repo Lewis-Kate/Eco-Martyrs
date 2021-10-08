@@ -24,7 +24,7 @@
             <p>Portrait Artist: <span id="portraitArtist"></p>
             <p>Sound Artists: <span id="soundArtist"></p>
             <p>Ecomartyr Bio: <span id="ecomartyrBio"></span></p>
-            <p>Links for further reading: <a href='${post.acf.additional_links}' id="additionalLinks"></a></p><br />
+            <p>Links for further reading: <span id="additionalLinks"></span><br/><span id="additionalLinksCopy"></span><br/><span id="additionalLinksCopy2"></span></p><br />
         </div>
 
         <div class="audioPlayer">

@@ -53,6 +53,16 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/ecomartyrs?_embed=true'
      ecomartyrBio.style.color = '#F9F6EE';
      ecomartyrBio.innerHTML = post.acf.ecomartyr_bio;
 
+     //Additional Links
+     let additionalLinks = document.getElementById("additionalLinks");
+     additionalLinks.innerHTML=`<a href='${post.acf.additional_links}'>${post.acf.additional_links}</a>`
+
+     let additionalLinks_copy = document.getElementById("additionalLinksCopy");
+     additionalLinks_copy.innerHTML=`<a href='${post.acf.additional_links_copy}'>${post.acf.additional_links_copy}</a>`
+
+     let additionalLinks_copy2 = document.getElementById("additionalLinksCopy2");
+     additionalLinks_copy2.innerHTML=`<a href='${post.acf.additional_links_copy2}'>${post.acf.additional_links_copy2}</a>`
+
     //Featured Image
     let image = document.getElementById("featuredImage");
     image.src = post._embedded['wp:featuredmedia']['0'].source_url;  
@@ -62,19 +72,20 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/ecomartyrs?_embed=true'
    //Show Next Slide
   function showNextSlide() {
     //increment currentSlide and then call renderView again with the new value of currentSlide
-    let x = currentSlide;
-    let nextSlide = ++x;
-    renderView(nextSlide);
-    //console.log(nextSlide);
-    //console.log(currentSlide);
-  }
+    currentSlide++
+    if(currentSlide + 1 > posts.length){
+      currentSlide = 0
+    }
+  renderView(currentSlide);
+   }
 
   //Show Previous Slide
   function showPreviousSlide() {
-    let x = currentSlide;
-    let previousSlide = x--;
-    renderView(previousSlide);
-    console.log(previousSlide);
+    currentSlide--
+    if(currentSlide - 1 > posts.length){
+      currentSlide = 0
+    }
+    renderView(currentSlide);
   }
 
 
