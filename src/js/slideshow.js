@@ -82,8 +82,8 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/ecomartyrs?_embed=true'
   //Show Previous Slide
   function showPreviousSlide() {
     currentSlide--
-    if(currentSlide - 1 > posts.length){
-      currentSlide = 0
+    if(currentSlide <= 0){
+      currentSlide = posts.length -1;
     }
     renderView(currentSlide);
   }
