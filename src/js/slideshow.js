@@ -55,18 +55,11 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/ecomartyrs?_embed=true'
 
      //Additional Links
      let additionalLinks = document.getElementById("additionalLinks");
-     additionalLinks.innerHTML=`<a href='${post.acf.additional_links}'>${post.acf.additional_links}</a>`
-
-     let additionalLinks_copy = document.getElementById("additionalLinksCopy");
-     additionalLinks_copy.innerHTML=`<a href='${post.acf.additional_links_copy}'>${post.acf.additional_links_copy}</a>`
-
-     let additionalLinks_copy2 = document.getElementById("additionalLinksCopy2");
-     additionalLinks_copy2.innerHTML=`<a href='${post.acf.additional_links_copy2}'>${post.acf.additional_links_copy2}</a>`
+     additionalLinks.innerHTML=`<a href='${post.acf.additional_links.values().link_url}>${post.acf.additional_links.values().link_url}</a>`
 
     //Featured Image
     let image = document.getElementById("featuredImage");
     image.src = post._embedded['wp:featuredmedia']['0'].source_url;  
-
    }
 
    //Show Next Slide
@@ -82,9 +75,11 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/ecomartyrs?_embed=true'
   //Show Previous Slide
   function showPreviousSlide() {
     currentSlide--
-    if(currentSlide <= 0){
-      currentSlide = posts.length -1;
+    if(currentSlide < posts.length -1){
+      currentSlide = 0;
     }
+    console.log(currentSlide)
+    console.log(currentSlide = posts.length -1)
     renderView(currentSlide);
   }
 

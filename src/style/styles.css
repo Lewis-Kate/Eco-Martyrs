@@ -12,8 +12,13 @@ body {
     justify-content: flex-end;
 }
 
+.fit_to_window{
+    height: calc(100vh);
+    width: 70%;
+}
+
 #featuredImage{
-    width: 50%;
+    object-fit: cover;
 }
 
 .stats_and_player {

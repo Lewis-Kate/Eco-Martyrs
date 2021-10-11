@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Poppins:wght@300&display=swap"
         rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <div class="showAll">
@@ -24,7 +25,7 @@
             <p>Portrait Artist: <span id="portraitArtist"></p>
             <p>Sound Artists: <span id="soundArtist"></p>
             <p>Ecomartyr Bio: <span id="ecomartyrBio"></span></p>
-            <p>Links for further reading: <span id="additionalLinks"></span><br/><span id="additionalLinksCopy"></span><br/><span id="additionalLinksCopy2"></span></p><br />
+            <p>Links for further reading: <span id="additionalLinks"></p><br />
         </div>
 
         <div class="audioPlayer">
@@ -53,9 +54,11 @@
         </div>
     </div>
 
-<img id="featuredImage">
+    <div class="fit_to_window">
+        <img id="featuredImage">
+    </div>
 
-<button id="showNext" onclick="showNextSlide()"><i class="fas fa-chevron-right"></i></button>
+    <button id="showNext" onclick="showNextSlide()"><i class="fas fa-chevron-right"></i></button>
 
 
 
