@@ -55,7 +55,10 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/ecomartyrs?_embed=true'
 
      //Additional Links
      let additionalLinks = document.getElementById("additionalLinks");
-     additionalLinks.innerHTML=`<a href='${post.acf.additional_links.values().link_url}>${post.acf.additional_links.values().link_url}</a>`
+     const linkText = post.acf.additional_links.map(link => `<a class="additionalLinks" href="${link.link_url}">${link.link_url}</a>`
+     ).join('')
+     console.log(linkText)
+     additionalLinks.innerHTML=linkText
 
     //Featured Image
     let image = document.getElementById("featuredImage");
@@ -74,12 +77,10 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/ecomartyrs?_embed=true'
 
   //Show Previous Slide
   function showPreviousSlide() {
-    currentSlide--
-    if(currentSlide < posts.length -1){
-      currentSlide = 0;
+    --currentSlide
+    if(currentSlide < 0 ){
+      currentSlide = posts.length - 1
     }
-    console.log(currentSlide)
-    console.log(currentSlide = posts.length -1)
     renderView(currentSlide);
   }
 
