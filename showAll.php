@@ -32,7 +32,7 @@
             <div class="player">
 
                 <!-- Define the section for displaying play button -->
-                <div class="playpause-track" onclick="playpauseTrack()">
+                <div id="audio" class="playpause-track" onclick="playpauseTrack()">
                     <i class="fa fa-play-circle fa-5x"></i>
                 </div>
 
