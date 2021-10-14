@@ -66,11 +66,6 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/ecomartyrs?_embed=true'
     //Audio   
     let curr_track = document.getElementById("audio"); 
     curr_track.src = post.acf.audio_file;
-    const music = new Audio(curr_track.src);
-    music.play();
-    music.loop =true;
-    music.playbackRate = 2;
-    music.pause();
     }
 
    //Show Next Slide
@@ -91,9 +86,5 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/ecomartyrs?_embed=true'
     }
     renderView(currentSlide);
   }
-
-    //****************************//
-    //        AUDIO PLAYER       //
-    //**************************//
 
     
