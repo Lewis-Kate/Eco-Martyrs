@@ -26,12 +26,13 @@ body {
     width: 60%;
 }
 
-#additionalLinks a, #additionalLinksCopy a, #additionalLinksCopy2 a{
+#additionalLinks a{
     color: #87CEEB;
     text-decoration: none;
+    display: block;
 }
 
-#additionalLinks a:hover, #additionalLinksCopy a:hover, #additionalLinksCopy2 a:hover{
+#additionalLinks a:hover{
     color: red;
     text-decoration: underline;
 }
