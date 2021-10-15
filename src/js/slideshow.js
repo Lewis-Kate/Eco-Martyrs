@@ -15,10 +15,26 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/ecomartyrs?_embed=true'
         json.forEach(element => {
           posts.push(element)
         });
-      renderView(currentSlide);
+        renderView(currentSlide);    
     }).catch(function(error) {
         console.log(error);
     });
+
+
+    function renderHomeView(){    
+      //gallery images
+      let image0 = document.getElementById("image0");
+      image0.src = posts[0]._embedded['wp:featuredmedia']['0'].source_url;
+
+      let image1 = document.getElementById("image1");
+      image1.src = posts[1]._embedded['wp:featuredmedia']['0'].source_url;
+
+      let image2 = document.getElementById("image2");
+      image2.src = posts[2]._embedded['wp:featuredmedia']['0'].source_url;
+
+      let image3 = document.getElementById("image3");
+      image3.src = posts[3]._embedded['wp:featuredmedia']['0'].source_url;
+    }
 
   //show the data on showAll.php
   function renderView(arrayIndex){
@@ -66,8 +82,10 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/ecomartyrs?_embed=true'
     //Audio   
     let curr_track = document.getElementById("audio"); 
     curr_track.src = post.acf.audio_file;
+
     }
 
+    
    //Show Next Slide
   function showNextSlide() {
     //increment currentSlide and then call renderView again with the new value of currentSlide

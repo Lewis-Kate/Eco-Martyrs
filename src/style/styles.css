@@ -1,7 +1,7 @@
 body {
     background-color: #1e2d32;
     color: #939699;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 /*show all page style*/
@@ -91,6 +91,8 @@ padding-right: .5em;
 .header p{
 	font-size: 1.1em;
 	color: #939699;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
 }
 
 .header h1{
@@ -108,4 +110,18 @@ button{
     margin: .5em;
     background-color: #1e2d32;
     color: red;
+}
+
+/*Home Page Grid/Image Gallery*/
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: [row1-start] auto [row1-end] auto [third-line] auto [last-line];
+    column-gap: 10px;
+    row-gap: 15px;
+}
+
+.container img{
+    height: calc(100vh);
+    width: 100%;
 }
