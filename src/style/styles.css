@@ -117,11 +117,47 @@ button{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: [row1-start] auto [row1-end] auto [third-line] auto [last-line];
-    column-gap: 10px;
-    row-gap: 15px;
+    column-gap: 25px;
+    row-gap: 20px;
 }
 
 .container img{
     height: calc(100vh);
     width: 100%;
+}
+
+/*taxonomy pages*/
+.wrapper{
+  display: grid;
+  grid-auto-flow: column;
+  gap: 4px;
+  text-align: center;
+  justify-content: center;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#taxonomy_image{
+    height: calc(100vh);
+    width: 30%;
+}
+
+.post-title a{
+    color: #87CEEB;
+    text-decoration: none;
+    display: block;
+}
+
+.post-title a:hover{
+    color: red;
+	text-decoration: underline;
+}
+
+.archive-title{
+    font-weight: bolder;
+    font-size: 3.5em;
 }
