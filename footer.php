@@ -15,11 +15,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
 <div class="footer">
-    <a href="http://multisite.local/eco-martyrs/showall/">Show All</a>
-    <a href="http://multisite.local/eco-martyrs/category/africa/">Africa</a>
-    <a href="http://multisite.local/eco-martyrs/category/north-america/">North America</a>
-    <a href="http://multisite.local/eco-martyrs/category/south-america/">South America</a>
-	<span>&copy;2021 <a href="http://multisite.local/eco-martyrs/">The Eco Martyrs</a></span>
+   	<span>&copy;2021 <a href="http://multisite.local/eco-martyrs/">The Eco Martyrs</a></span>
 </div>
 
 
