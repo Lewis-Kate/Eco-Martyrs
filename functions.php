@@ -46,7 +46,6 @@ foreach ( $understrap_includes as $file ) {
 function load_scripts(){
 	wp_enqueue_script( 'wp-api' );
 	wp_enqueue_script( 'slideshow', get_template_directory_uri(  ) . '/src/js/slideshow.js', array( 'wp-api' ) , '1.0.0', true);
-	wp_enqueue_script( 'audioPlayer', get_template_directory_uri(  ) . '/src/js/audioPlayer.js', array( 'wp-api' ) , '1.0.0', true);
 	wp_enqueue_style( 'styles', get_template_directory_uri(  ) . '/src/style/styles.css', array(), '1.0.0');
 }
 
@@ -76,3 +75,12 @@ function create_posttype() {
 }
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype' );
+
+//include wp-bootstrap-navwalker.php
+require_once(get_template_directory() . "/inc/class-wp-bootstrap-navwalker.php");
+
+function ecomartyrs_register_nav_menu() {
+	register_nav_menus( array( 'primary menu' => 'Main' ) );
+}	
+
+add_action( 'init', 'ecomartyrs_register_nav_menu' );

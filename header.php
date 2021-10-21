@@ -33,13 +33,31 @@ $container = get_theme_mod( 'understrap_container_type' );
     <?php do_action( 'wp_body_open' ); ?>
 
     <div class="header">
-        <h1><a href="http://multisite.local/eco-martyrs/">The Eco Martyrs</a><img src="/wp-content/themes/eco-martyrs/src/img/globe.svg"></h1>
+        <h1><a href="http://multisite.local/eco-martyrs/">The Eco Martyrs</a><img
+                src="/wp-content/themes/eco-martyrs/src/img/globe.svg"></h1>
         <p>Visual and sound artists pay tribute to the fallen from around the globe</p>
 
-        <nav>
+        <!-- <nav>
             <a href="http://multisite.local/eco-martyrs/showall/">Show All</a>
             <a href="http://multisite.local/eco-martyrs/category/africa/">Africa</a>
             <a href="http://multisite.local/eco-martyrs/category/north-america/">North America</a>
             <a href="http://multisite.local/eco-martyrs/category/south-america/">South America</a>
-        </nav>
+        </nav> -->
+
+        <?php
+  wp_nav_menu(
+    array(
+      'menu'            => 'primary',
+      'theme_location'  => 'primary_menu',
+      'container_class' => 'collapse navbar-collapse',
+      'container_id'    => 'primary_menuNavDropdown',
+      'menu_class'      => 'navbar-nav',
+      'fallback_cb'     => '',
+      'menu_id'         => 'primary_menu',
+      'depth'           => '2',
+      'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+    )
+  );
+?>
+
     </div>
