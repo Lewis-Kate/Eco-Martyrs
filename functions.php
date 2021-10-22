@@ -76,11 +76,3 @@ function create_posttype() {
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype' );
 
-//include wp-bootstrap-navwalker.php
-require_once(get_template_directory() . "/inc/class-wp-bootstrap-navwalker.php");
-
-function ecomartyrs_register_nav_menu() {
-	register_nav_menus( array( 'primary menu' => 'Main' ) );
-}	
-
-add_action( 'init', 'ecomartyrs_register_nav_menu' );
