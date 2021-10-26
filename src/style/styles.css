@@ -150,6 +150,14 @@ button{
     width: 100%;
 }
 
+.galleryButton i{
+    color: #FFED5F;
+}
+
+#rightButton{
+    float: right;
+}
+
 /*taxonomy pages*/
 .wrapper{
    width: 950px;
@@ -206,4 +214,8 @@ button{
 
 .contactForm input{
     float: right;
+}
+
+.gform_wrapper .gfield_required{
+    color: red !important;
 }
