@@ -47,6 +47,7 @@ function load_scripts(){
 	wp_enqueue_script( 'wp-api' );
 	wp_enqueue_script( 'slideshow', get_template_directory_uri(  ) . '/src/js/slideshow.js', array( 'wp-api' ) , '1.0.0', true);
 	wp_enqueue_style( 'styles', get_template_directory_uri(  ) . '/src/style/styles.css', array(), '1.0.0');
+	gravity_form_enqueue_scripts( 1, true );
 }
 
 add_action( 'wp_enqueue_scripts', 'load_scripts' );

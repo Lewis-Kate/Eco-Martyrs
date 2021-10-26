@@ -7,6 +7,7 @@
     <div class="stats_and_player">
         <div id="ecoStats">
             <p>Ecomartyr Name: <span id="ecoMartyrName"></span></p>
+            <p>Sex: <span id="ecoMartyrSex"></span></p>
             <p>Country: <span id="ecoMartyrCountry"></span> </p>
             <p>Date of Death: <span id="dateOfDeath"></p>
             <p>Portrait Artist: <span id="portraitArtist"></p>
@@ -17,6 +18,10 @@
 
         <div class="audioPlayer">
             <audio controls autoplay loop id="audio"></audio>
+        </div>
+
+        <div class="moreInfo">
+            <a href="http://multisite.local/eco-martyrs/contact/">Please click hear to provide more information about this Ecomartyr.</a>
         </div>
     </div>
 

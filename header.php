@@ -37,11 +37,9 @@ $container = get_theme_mod( 'understrap_container_type' );
             href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
         <nav id="main-nav" class="navbar navbar-expand-md navbar-dark" aria-labelledby="main-nav-label">
-            
-                <h1 class="nav-item"><a class="navTitle" href="http://multisite.local/eco-martyrs/">The Eco Martyrs</a><img
-                        src="/wp-content/themes/eco-martyrs/src/img/globe.svg"></h1>
-                <p class="nav-item">Visual and sound artists pay tribute to the fallen from around the globe</p>
-         
+
+            <h1><a href="http://multisite.local/eco-martyrs/">The Eco Martyrs</a><img
+                    src="/wp-content/themes/eco-martyrs/src/img/globe.svg"></h1>
 
             <h2 id="main-nav-label" class="sr-only">
                 <?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
@@ -52,35 +50,36 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <?php endif; ?>
 
                 <!-- Your site title as branding in the menu -->
-                <?php if ( ! has_custom_logo() ) { ?>
+            <?php if ( ! has_custom_logo() ) { ?>
 
-                <?php if ( is_front_page() && is_home() ) : ?>
+            <?php if ( is_front_page() && is_home() ) : ?>
 
-                <h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>"
-                        itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
+            <h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>"
+                    itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
 
-                <?php else : ?>
+            <?php else : ?>
 
-                <!-- <a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>"
+            <!-- <a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>"
                     itemprop="url"><?php bloginfo( 'name' ); ?></a> -->
 
-                <?php endif; ?>
+            <?php endif; ?>
 
-                <?php
+            <?php
 					} else {
 						the_custom_logo();
 					}
-					?> 
-                <!-- end custom logo -->
+					?>
+            <!-- end custom logo -->
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false"
+                aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <!-- The WordPress Menu goes here -->
-                <?php
+
+            <!-- The WordPress Menu goes here -->
+            <?php
 				wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
@@ -94,10 +93,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 					)
 				);
 				?>
-                <?php if ( 'container' === $container ) : ?>
-            </div><!-- .container -->
-            <?php endif; ?>
+            <?php if ( 'container' === $container ) : ?>
 
-        </nav><!-- .site-navigation -->
+
+    </div><!-- .container -->
+    <?php endif; ?>
+
+    </nav><!-- .site-navigation -->
+
 
     </div><!-- #wrapper-navbar end -->
+
+    <div class="subHead">
+        <h5>Visual and sound artists pay tribute to the fallen from around the globe</h5>
+    </div>

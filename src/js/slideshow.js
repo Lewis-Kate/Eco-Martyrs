@@ -29,6 +29,11 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/ecomartyrs?_embed=true'
       name.style.color = '#F9F6EE';
       name.innerHTML = post.acf.title;
 
+      //Sex
+      let sex = document.getElementById("ecoMartyrSex");
+      sex.style.color = '#F9F6EE';
+      sex.innerHTML = post.acf.sex;
+
     //Country
      let country = document.getElementById("ecoMartyrCountry");
      country.style.color = '#F9F6EE';

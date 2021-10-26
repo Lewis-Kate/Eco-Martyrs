@@ -41,6 +41,22 @@ body {
     text-decoration: underline;
 }
 
+.moreInfo a{
+    color: #FFED5F;
+    text-decoration: none;
+    display: block;
+    line-height: 1.8;
+    font-size: 1.2em;
+}
+
+.moreInfo{
+    padding: 1em 0;
+}
+
+.moreInfo a:hover{
+    color: red;
+    text-decoration: underline;
+}
 
 /*footer styles*/
 .footer a{
@@ -60,17 +76,12 @@ body {
     justify-content: space-evenly;
 }
 
-.navTitle{
+.header nav h1 a{
     font-family: 'Chonburi', cursive !important;
-	font-size: 1.4em;
+	font-size: 1em !important;
+    color: #FFED5F !important;
 }
 
-.header a{
-		color: #FFED5F;
-		text-decoration: none;
-		padding-right: .5em;
-		font-size: 1.2em;
-	}
 .header a:hover{
 		color: red;
 		text-decoration: underline;
@@ -81,6 +92,19 @@ body {
 	color: #939699;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
+}
+
+.header img{
+    padding-right: 1em;
+}
+
+.subHead{
+    text-align: center;
+}
+
+.subHead h5{
+    margin-top: -40px;
+    margin-bottom: 40px;
 }
 
 /*nav links*/
@@ -94,6 +118,10 @@ body {
 .header nav a:hover{
     color: red;
     text-decoration: underline;
+}
+
+a.dropdown-item{
+    color: #1e2d32 !important;
 }
 
 /*hide WP admin bar*/
@@ -164,4 +192,18 @@ button{
     font-weight: bolder;
     font-size: 3.5em;
     text-align: center;
+}
+
+/*Contact Form*/
+.contactForm{
+    width: 60%;
+    margin: auto;
+}
+
+.gform_title{
+    text-align: center;
+}
+
+.contactForm input{
+    float: right;
 }
