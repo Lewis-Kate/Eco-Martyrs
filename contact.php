@@ -3,7 +3,7 @@
 
 <div class="contactForm">
     <?php 
-        gravity_form( 1, true, false, true, '', false ); 
+        gravity_form( 1, true, true, true, '', false ); 
     ?>
 </div>
 

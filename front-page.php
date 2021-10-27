@@ -2,10 +2,10 @@
 
 <div class="galleryButton">
     <button onclick="location.href='https://multisite.local/eco-martyrs/showall/'" type="button"><i
-            class="fas fa-chevron-left"></i></button>
+            class="fas fa-chevron-left fa-2x"></i></button>
 
     <button id="rightButton" onclick="location.href='https://multisite.local/eco-martyrs/showall/'" type="button"><i
-            class="fas fa-chevron-right"></i></button>
+            class="fas fa-chevron-right fa-2x"></i></button>
 </div>
 
 <?php 

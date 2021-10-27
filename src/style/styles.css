@@ -111,6 +111,10 @@ body {
 }
 
 /*nav links*/
+.dropdown-menu{
+    background-color: rgba(30, 45, 50, 0.75) !important;
+}
+
 .header nav a{
     font-size: 1em;
     color: #e8e8e8 !important;
@@ -118,14 +122,12 @@ body {
     padding-right: .3em;
     font-family: 'Quicksand', sans-serif;
 }
+
 .header nav a:hover{
     color: red !important;
     text-decoration: underline;
 }
 
-a.dropdown-item{
-    color: #1e2d32 !important;
-}
 
 /*hide WP admin bar*/
 #wpadminbar { display:none !important;}
@@ -135,8 +137,9 @@ button{
     height: 60%;
     padding: .5em;
     margin: .5em;
-    background-color: #1e2d32;
-    color: red;
+    border: none;
+    background: none;
+    color: #FFED5F;
 }
 
 /*Home Page Grid/Image Gallery*/
@@ -153,9 +156,11 @@ button{
     width: 100%;
 }
 
-.galleryButton i{
+/* .galleryButton i{
+    border: none;
+    background: none;
     color: #FFED5F;
-}
+} */
 
 #rightButton{
     float: right;
@@ -206,19 +211,28 @@ button{
 }
 
 /*Contact Form*/
-.contactForm{
+.contactForm, .artistForm{
     width: 60%;
     margin: auto;
 }
 
 .gform_title{
     text-align: center;
+    margin-bottom: .5em;
 }
 
-.contactForm input{
+.gform_body{
+    margin-top: 1.3em;
+}
+
+.contactForm input, .artistForm input{
     float: right;
 }
 
 .gform_wrapper .gfield_required{
     color: red !important;
+}
+
+.gform_description{
+    color: #95aaaa;
 }
