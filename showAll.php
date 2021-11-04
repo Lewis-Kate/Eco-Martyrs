@@ -2,8 +2,13 @@
 <?php get_header(); ?>
 
 
+<div class="galleryButton">
+<button onclick="showPreviousSlide()"><i class="fas fa-chevron-left fa-2x"></i></button>
+<button id="showNext" class="rightButton" onclick="showNextSlide()"><i class="fas fa-chevron-right fa-2x"></i></button>
+</div>
+
 <div class="showAll">
-    <button onclick="showPreviousSlide()"><i class="fas fa-chevron-left fa-2x"></i></button>
+   
     <div class="stats_and_player">
         <div id="ecoStats">
             <p>Ecomartyr Name: <span id="ecoMartyrName"></span></p>
@@ -29,7 +34,7 @@
         <img id="featuredImage">
     </div>
 
-    <button id="showNext" onclick="showNextSlide()"><i class="fas fa-chevron-right fa-2x"></i></button>
+  
 
 </div>
 

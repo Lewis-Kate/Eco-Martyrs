@@ -110,6 +110,7 @@ body {
     margin-bottom: 40px;
 }
 
+
 /*nav links*/
 .dropdown-menu{
     background-color: rgba(30, 45, 50, 0.75) !important;
@@ -162,7 +163,7 @@ button{
     color: #FFED5F;
 } */
 
-#rightButton{
+.rightButton{
     float: right;
 }
 
@@ -216,6 +217,7 @@ button{
     margin: auto;
 }
 
+
 .gform_title{
     text-align: center;
     margin-bottom: .5em;
@@ -225,8 +227,10 @@ button{
     margin-top: 1.3em;
 }
 
-.contactForm input, .artistForm input{
-    float: right;
+@media only screen and (min-width: 700px) {
+    .contactForm input, .artistForm input{
+        float: right;
+    }
 }
 
 .gform_wrapper .gfield_required{
@@ -236,3 +240,45 @@ button{
 .gform_description{
     color: #95aaaa;
 }
+
+/*responsive css*/
+
+@media only screen and (max-width: 600px) {
+    .header img{
+        display: none;
+    }
+    .header nav h1 a{
+        font-size: .8em !important;
+    }
+    .subHead{
+     margin-top: -100px;
+    }
+    .subHead h5{
+        font-size: 1em;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: [row1-start] auto [row1-end] auto [third-line] auto [last-line];
+        object-fit: contain;
+        text-align: center;
+    }
+    .stats_and_player {
+        margin: auto;
+        width: 80%;
+        order: 2;
+    }
+    #featuredImage{
+        width: 100%;
+    }
+    .showAll{
+        display: flex;
+        flex-direction: column;
+    }
+    .fit_to_window{
+        order: 1;
+        height: auto;
+        width: 90%;
+        margin: auto;
+    }
+  }
