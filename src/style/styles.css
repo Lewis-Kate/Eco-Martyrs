@@ -158,12 +158,6 @@ button{
     width: 100%;
 }
 
-/* .galleryButton i{
-    border: none;
-    background: none;
-    color: #FFED5F;
-} */
-
 .rightButton{
     float: right;
 }
@@ -242,6 +236,11 @@ button{
     color: #95aaaa;
 }
 
+/*About Pages*/
+.about{
+    text-align: center;
+}
+
 /*responsive css*/
 @media only screen and (max-width: 600px) {
     .header img{
@@ -250,11 +249,11 @@ button{
     .header nav h1 a{
         font-size: .8em !important;
     }
-    .subHead{
-     margin-top: -100px;
-    }
     .subHead h5{
         font-size: 1em;
+    }
+    button.navbar-toggler{
+        height: auto !important;
     }
     .container{
         display: grid;
@@ -281,4 +280,4 @@ button{
         width: 90%;
         margin: auto;
     }
-  }
+}

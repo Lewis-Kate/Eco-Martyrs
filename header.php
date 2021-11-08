@@ -69,7 +69,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					}
 					?>
             <!-- end custom logo -->
-
+            
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false"
                 aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
@@ -97,12 +97,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 
     </div><!-- .container -->
     <?php endif; ?>
+    
+    <div class="subHead">
+        <h5>Visual and sound artists pay tribute to the fallen from around the globe</h5>
+    </div>
 
     </nav><!-- .site-navigation -->
 
 
     </div><!-- #wrapper-navbar end -->
-
-    <div class="subHead">
-        <h5>Visual and sound artists pay tribute to the fallen from around the globe</h5>
-    </div>
