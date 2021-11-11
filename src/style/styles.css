@@ -73,6 +73,10 @@ body {
     text-decoration: underline;
 }
 
+.footer{
+    margin: 1em;
+}
+
 /*header styles*/
 .header{
     display: flex;
@@ -239,6 +243,43 @@ button{
 /*About Pages*/
 .about{
     text-align: center;
+}
+
+.aboutContent{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+.aboutContent h3{
+    text-align: center;
+}
+
+.aboutParagraphs{
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+
+.aboutContent a{
+    color: #87CEEB;
+    text-decoration: none;
+    display: block;
+    line-height: 1.8;
+}
+
+.resarchGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 4em;
+}
+
+.maslowVideo iframe{
+    display:block;
+    margin: 0 auto;
+}
+
+.maslowVideo{
+    padding-bottom: 3em;
 }
 
 /*responsive css*/
