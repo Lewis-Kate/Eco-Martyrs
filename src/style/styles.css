@@ -267,6 +267,11 @@ button{
     line-height: 1.8;
 }
 
+.aboutContent a:hover{
+    color: red;
+    text-decoration: underline;
+}
+
 .resarchGrid{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -280,6 +285,14 @@ button{
 
 .maslowVideo{
     padding-bottom: 3em;
+}
+
+.aboutContact{
+    padding-top: 1em;
+}
+
+.aboutContact a{
+    display: inline;
 }
 
 /*responsive css*/

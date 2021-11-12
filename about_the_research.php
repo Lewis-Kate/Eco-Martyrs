@@ -61,6 +61,10 @@
         Purrington, W., Rios-Santos, K. Latourrette, C.,
         Guz-Montgomery, J.(2021). Eco-Martyrdom: Positive elements of self-sacrifice.
         Theory and Psychology. doi.org/10.1177/09593543211040792</a>
+
+    <div class="aboutContact">
+        <p>Contact Richard Bargdill at <a href = "mailto: rwbargdill@vcu.edu">rwbargdill@vcu.edu</a></p>
+    </div>
 </div>
 
 <?php get_footer(); ?>
