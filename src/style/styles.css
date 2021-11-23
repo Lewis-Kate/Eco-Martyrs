@@ -295,6 +295,26 @@ button{
     display: inline;
 }
 
+.posters_grid{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 3em;
+}
+
+.thumb{
+    border: 1px solid #ecf0f1;
+    border-radius: 4px;
+    padding: 5px;
+    width: 350px;
+}
+
+.thumb:hover {
+    border: 1px solid #87CEEB;
+    border-radius: 4px;
+  }
+
 /*responsive css*/
 @media only screen and (max-width: 600px) {
     .header img{

@@ -56,6 +56,25 @@
             allow="autoplay"></iframe>
     </div>
 
+    <h3>APA 2021 - Eco-Martyr Stories Posters</h3>
+    <div class="posters_grid">
+        <div class="posters">
+            <a href="/wp-content/themes/eco-martyrs/src/img/stories_poster_circle.jpg"><img class="thumb"
+                    alt="APA 2021 - Eco Martyr Stories Poster - CIRCLES"
+                    src="/wp-content/themes/eco-martyrs/src/img/stories_poster_circle.jpg"></a>
+        </div>
+        <div class="posters">
+            <a href="/wp-content/themes/eco-martyrs/src/img/stories_poster_finished.jpg"><img class="thumb"
+                    alt="APA 2021 - Eco Martyr Stories Poster - FINISHED"
+                    src="/wp-content/themes/eco-martyrs/src/img/stories_poster_finished.jpg"></a>
+        </div>
+        <div class="posters">
+            <a href="/wp-content/themes/eco-martyrs/src/img/stories_poster_final.jpg"><img class="thumb"
+                    alt="APA 2021 - Eco Martyr Stories Poster - FINAL"
+                    src="/wp-content/themes/eco-martyrs/src/img/stories_poster_final.jpg"></a>
+        </div>
+    </div>
+
     <h3>Publications</h3>
     <a href="https://journals.sagepub.com/doi/10.1177/09593543211040792">Bargdill, R., Lankford, A., Creed, R.,
         Purrington, W., Rios-Santos, K. Latourrette, C.,
@@ -63,7 +82,7 @@
         Theory and Psychology. doi.org/10.1177/09593543211040792</a>
 
     <div class="aboutContact">
-        <p>Contact Richard Bargdill at <a href = "mailto: rwbargdill@vcu.edu">rwbargdill@vcu.edu</a></p>
+        <p>Contact Richard Bargdill at <a href="mailto: rwbargdill@vcu.edu">rwbargdill@vcu.edu</a></p>
     </div>
 </div>
 
