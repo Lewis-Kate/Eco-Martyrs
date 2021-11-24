@@ -43,16 +43,16 @@
 
     <h3>The Self-Actualization of Eco-Martyrs</h3>
     <div class="resarchGrid">
-        <iframe src="https://drive.google.com/file/d/1kalNb292djzyz6i3CC3eh-3J02biLeuQ/preview" width="512" height="384"
+        <iframe class="responsive-iframe" src="https://drive.google.com/file/d/1kalNb292djzyz6i3CC3eh-3J02biLeuQ/preview" width="512" height="384"
             allow="autoplay"></iframe>
 
-        <iframe src="https://drive.google.com/file/d/1XPX8osC2sbsnhC2--8YMfZfiawrm9ER8/preview" width="512" height="384"
+        <iframe class="responsive-iframe" src="https://drive.google.com/file/d/1XPX8osC2sbsnhC2--8YMfZfiawrm9ER8/preview" width="512" height="384"
             allow="autoplay"></iframe>
     </div>
 
     <div class="maslowVideo">
         <h3>Eco-Martyrs &amp Maslow</h3>
-        <iframe src="https://drive.google.com/file/d/1l-0fwCUhKODa6pdoQ5kvM_f6Ive8kxaq/preview" width="512" height="384"
+        <iframe class="responsive-iframe" src="https://drive.google.com/file/d/1l-0fwCUhKODa6pdoQ5kvM_f6Ive8kxaq/preview" width="512" height="384"
             allow="autoplay"></iframe>
     </div>
 

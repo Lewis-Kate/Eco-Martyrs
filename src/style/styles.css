@@ -318,6 +318,12 @@ button{
     transition-property: transform;
   }
 
+/*archives*/
+.google_sheet{
+    width: 1200px;
+    margin: auto;
+}
+
 /*responsive css*/
 @media only screen and (max-width: 600px) {
     .header img{
@@ -356,5 +362,8 @@ button{
         height: auto;
         width: 90%;
         margin: auto;
+    }
+    .resarchGrid{
+        display: block;
     }
 }
