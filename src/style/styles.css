@@ -313,6 +313,9 @@ button{
 .thumb:hover {
     border: 1px solid #87CEEB;
     border-radius: 4px;
+    transform: perspective(10px) translateZ(3px);
+    transition-duration: 0.3s;
+    transition-property: transform;
   }
 
 /*responsive css*/
