@@ -46,6 +46,7 @@ foreach ( $understrap_includes as $file ) {
 function load_scripts(){
 	wp_enqueue_script( 'wp-api' );
 	wp_enqueue_script( 'slideshow', get_template_directory_uri(  ) . '/src/js/slideshow.js', array( 'wp-api' ) , '1.0.0', true);
+	wp_enqueue_script( 'archiveGallery', get_template_directory_uri(  ) . '/src/js/archiveGallery.js', array( 'wp-api' ) , '1.0.0', true);
 	wp_enqueue_style( 'styles', get_template_directory_uri(  ) . '/src/style/styles.css', array(), '1.0.0');
 	gravity_form_enqueue_scripts( 1, true );
 }
@@ -68,7 +69,7 @@ function create_posttype() {
             'rewrite' => array('slug' => 'ecomartyrs'),
             'show_in_rest' => true,
 			'menu_icon' => 'dashicons-admin-site',
-			//'supports' => array( 'thumbnail' )
+			'supports' => array( 'thumbnail' )
  
         )
     );
@@ -76,4 +77,28 @@ function create_posttype() {
 }
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype' );
+
+// Our custom post type function
+function create_archive() {
+ 
+    register_post_type( 'archive gallery',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Archive Gallery' ),
+                'singular_name' => __( 'Archive Gallery' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'archive galleries'),
+            'show_in_rest' => true,
+			'menu_icon' => 'dashicons-admin-site',
+			'supports' => array( 'thumbnail' )
+ 
+        )
+    );
+	add_post_type_support( 'archive_gallery', 'thumbnail' );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_archive' );
 

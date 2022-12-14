@@ -1,6 +1,6 @@
 body {
     background-color: #1e2d32;
-    color: #ecf0f1;
+    color: #fbfcfc;
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -11,6 +11,12 @@ body {
     justify-content: flex-end;
     margin: .8em;
 }
+
+.show{
+    text-align: center;
+    color: #fbfcfc;
+}
+
 
 .fit_to_window{
     height: calc(100vh);
@@ -134,9 +140,6 @@ body {
     text-decoration: underline;
 }
 
-
-/*hide WP admin bar*/
-#wpadminbar { display:none !important;}
 
 /*button styles*/
 button{
@@ -304,7 +307,7 @@ button{
 }
 
 .thumb{
-    border: 1px solid #ecf0f1;
+    border: 1px solid #fbfcfc;
     border-radius: 4px;
     padding: 5px;
     width: 350px;

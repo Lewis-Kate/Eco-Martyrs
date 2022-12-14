@@ -1,9 +1,9 @@
-const posts=[];
-let currentSlide = 0;
+const psts = [];
+//let currentSlide = 0;
 
 
-//connet to API and create console log the data ecomartrys
-fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/ecomartyrs?_embed=true')
+//connet to API and create console log the data archive gallery
+fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/archivegallery?_embed=true')
     .then(function(response) {
         if (!response.ok) {
             throw Error("Failure to Load");
@@ -13,7 +13,7 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/ecomartyrs?_embed=true'
       //this is where the data is
         console.log(json);
         json.forEach(element => {
-          posts.push(element)
+          psts.push(element)
         });
         renderView(currentSlide);    
     }).catch(function(error) {
@@ -21,49 +21,49 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/ecomartyrs?_embed=true'
     });
 
 
-  //show the data on showAll.php
+  //show the data on page-archive-gallery.php
   function renderView(arrayIndex){
     //EcoMartyr Name 
-      const post = posts[arrayIndex]
-      let name = document.getElementById("ecoMartyrName");
+      const post = psts[arrayIndex]
+      let name = document.getElementById("archiveName");
       name.style.color = '#F9F6EE';
       name.innerHTML = post.acf.title;
 
       //Sex
-      let sex = document.getElementById("ecoMartyrSex");
+      let sex = document.getElementById("archiveSex");
       sex.style.color = '#F9F6EE';
       sex.innerHTML = post.acf.sex;
 
     //Country
-     let country = document.getElementById("ecoMartyrCountry");
+     let country = document.getElementById("archiveCountry");
      country.style.color = '#F9F6EE';
      country.innerHTML = post.acf.country;
 
      //Date of Death
-     let dateOfDeath = document.getElementById("dateOfDeath");
+     let dateOfDeath = document.getElementById("archiveDeath");
      dateOfDeath.style.color = '#F9F6EE';
      dateOfDeath.innerHTML = post.acf.date_of_death;
      
      //Portrait Artist
-     let portraitArtist = document.getElementById("portraitArtist");
+     let portraitArtist = document.getElementById("archiveArtist");
      portraitArtist.style.color = '#F9F6EE';
      portraitArtist.innerHTML = post.acf.portrait_artist;
 
      //Sound Artist
-     let soundArtist = document.getElementById("soundArtist");
+     let soundArtist = document.getElementById("archiveArtist");
      soundArtist.style.color = '#F9F6EE';
      soundArtist.innerHTML = post.acf.sound_artist;
 
      //Ecomartyr Bio
-     let ecomartyrBio = document.getElementById("ecomartyrBio");
+     let ecomartyrBio = document.getElementById("archiveBio");
      ecomartyrBio.style.color = '#F9F6EE';
      ecomartyrBio.innerHTML = post.acf.ecomartyr_bio;
 
      //Additional Links
-     let additionalLinks = document.getElementById("additionalLinks");
-     const linkText = post.acf.additional_links.map(link => `<a class="additionalLinks" href="${link.link_url}">${link.link_url}</a>`
-     ).join('')
-     additionalLinks.innerHTML=linkText
+    // let additionalLinks = document.getElementById("archiveLinks");
+     //const linkText = post.acf.additional_links.map(link => `<a class="archiveLinks" href="${link.link_url}">${link.link_url}</a>`
+     //).join('')
+    // additionalLinks.innerHTML=linkText
 
     //Featured Image
     let image = document.getElementById("featuredImage");
@@ -76,21 +76,21 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/ecomartyrs?_embed=true'
     }
 
     
-   //Show Next Slide
-  function showNextSlide() {
+   //Show Next currentSlide
+  function nextcurrentSlide() {
     //increment currentSlide and then call renderView again with the new value of currentSlide
     currentSlide++
-    if(currentSlide + 1 > posts.length){
+    if(currentSlide + 1 > post.length){
       currentSlide = 0
     }
   renderView(currentSlide);
    }
 
-  //Show Previous Slide
-  function showPreviousSlide() {
+  //Show Previous currentSlide
+  function previouscurrentSlide() {
     --currentSlide
     if(currentSlide < 0 ){
-      currentSlide = posts.length - 1
+      currentSlide = post.length - 1
     }
     renderView(currentSlide);
   }
