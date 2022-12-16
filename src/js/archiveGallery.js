@@ -1,5 +1,5 @@
 const psts = [];
-//let currentSlide = 0;
+let slide = 0;
 
 
 //connet to API and create console log the data archive gallery
@@ -15,7 +15,7 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/archivegallery?_embed=t
         json.forEach(element => {
           psts.push(element)
         });
-        renderView(currentSlide);    
+        renderView(slide);    
     }).catch(function(error) {
       console.log(error);
     });
@@ -24,77 +24,77 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/archivegallery?_embed=t
   //show the data on page-archive-gallery.php
   function renderView(arrayIndex){
     //EcoMartyr Name 
-      const post = psts[arrayIndex]
+      const p = psts[arrayIndex]
       let name = document.getElementById("archiveName");
       name.style.color = '#F9F6EE';
-      name.innerHTML = post.acf.title;
+      name.innerHTML = p.acf.title;
 
       //Sex
       let sex = document.getElementById("archiveSex");
       sex.style.color = '#F9F6EE';
-      sex.innerHTML = post.acf.sex;
+      sex.innerHTML = p.acf.sex;
 
     //Country
      let country = document.getElementById("archiveCountry");
      country.style.color = '#F9F6EE';
-     country.innerHTML = post.acf.country;
+     country.innerHTML = p.acf.country;
 
      //Date of Death
      let dateOfDeath = document.getElementById("archiveDeath");
      dateOfDeath.style.color = '#F9F6EE';
-     dateOfDeath.innerHTML = post.acf.date_of_death;
+     dateOfDeath.innerHTML = p.acf.date_of_death;
      
      //Portrait Artist
      let portraitArtist = document.getElementById("archiveArtist");
      portraitArtist.style.color = '#F9F6EE';
-     portraitArtist.innerHTML = post.acf.portrait_artist;
+     portraitArtist.innerHTML = p.acf.portrait_artist;
 
      //Sound Artist
      let soundArtist = document.getElementById("archiveArtist");
      soundArtist.style.color = '#F9F6EE';
-     soundArtist.innerHTML = post.acf.sound_artist;
+     soundArtist.innerHTML = p.acf.sound_artist;
 
      //Ecomartyr Bio
      let ecomartyrBio = document.getElementById("archiveBio");
      ecomartyrBio.style.color = '#F9F6EE';
-     ecomartyrBio.innerHTML = post.acf.ecomartyr_bio;
+     ecomartyrBio.innerHTML = p.acf.ecomartyr_bio;
 
      
     //Featured Image
     let image = document.getElementById("archiveImage");
-    image.src = post._embedded['wp:featuredmedia']['0'].source_url; 
+    image.src = p._embedded['wp:featuredmedia']['0'].source_url; 
 
      //Additional Links
      let additionalLinks = document.getElementById("archiveLinks");
-     const linkText = post.acf.additional_links.map(link => `<a class="archiveLinks" href="${link.link_url}">${link.link_url}</a>`
+     const linkText = p.acf.additional_links.map(link => `<a class="archiveLinks" href="${link.link_url}">${link.link_url}</a>`
      ).join('')
     additionalLinks.innerHTML=linkText
  
 
     //Audio   
     let curr_track = document.getElementById("audio"); 
-    curr_track.src = post.acf.audio_file;
+    curr_track.src = p.acf.audio_file;
 
     }
 
     
-   //Show Next currentSlide
-  function nextcurrentSlide() {
-    //increment currentSlide and then call renderView again with the new value of currentSlide
-    currentSlide++
-    if(currentSlide + 1 > post.length){
-      currentSlide = 0
+   //Show Next slide
+  function nextslide() {
+    //increment slide and then call renderView again with the new value of slide
+    slide++
+    if(slide + 1 > p.length){
+      slide = 0
     }
-  renderView(currentSlide);
+  renderView(slide);
    }
 
-  //Show Previous currentSlide
-  function previouscurrentSlide() {
-    --currentSlide
-    if(currentSlide < 0 ){
-      currentSlide = post.length - 1
+  //Show Previous slide
+  function previousslide() {
+    --slide
+    if(slide < 0 ){
+      slide = p.length - 1
     }
-    renderView(currentSlide);
+    renderView(slide);
   }
 
     
