@@ -59,15 +59,17 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/archivegallery?_embed=t
      ecomartyrBio.style.color = '#F9F6EE';
      ecomartyrBio.innerHTML = post.acf.ecomartyr_bio;
 
-     //Additional Links
-    // let additionalLinks = document.getElementById("archiveLinks");
-     //const linkText = post.acf.additional_links.map(link => `<a class="archiveLinks" href="${link.link_url}">${link.link_url}</a>`
-     //).join('')
-    // additionalLinks.innerHTML=linkText
-
+     
     //Featured Image
-    let image = document.getElementById("featuredImage");
-    image.src = post._embedded['wp:featuredmedia']['0'].source_url;  
+    let image = document.getElementById("archiveImage");
+    image.src = post._embedded['wp:featuredmedia']['0'].source_url; 
+
+     //Additional Links
+     let additionalLinks = document.getElementById("archiveLinks");
+     const linkText = post.acf.additional_links.map(link => `<a class="archiveLinks" href="${link.link_url}">${link.link_url}</a>`
+     ).join('')
+    additionalLinks.innerHTML=linkText
+ 
 
     //Audio   
     let curr_track = document.getElementById("audio"); 

@@ -1,7 +1,7 @@
 <?php /*Template Name: Archive Gallery */ ?>
 <?php get_header(); ?>
 
-<h1 class="show">Archive Gallery</h1>
+<h1 class="archive">Archive Gallery</h1>
 <div class="galleryButton">
 <button onclick="showPreviousSlide()"><i class="fas fa-chevron-left fa-2x"></i></button>
 <button id="showNext" class="rightButton" onclick="showNextSlide()"><i class="fas fa-chevron-right fa-2x"></i></button>

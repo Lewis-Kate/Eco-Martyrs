@@ -4,6 +4,15 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
+body p{
+    font-size: 1.1em;
+}
+
+/*archive gallery*/
+.archive{
+    text-align: center;
+}
+
 /*show all page style*/
 .showAll{
     display: flex;
@@ -12,7 +21,7 @@ body {
     margin: .8em;
 }
 
-.show{
+.showAll h1{
     text-align: center;
     color: #fbfcfc;
 }
@@ -23,7 +32,7 @@ body {
     width: 50%;
 }
 
-#featuredImage{
+#featuff99d6Image{
     object-fit: contain;
 }
 
@@ -37,18 +46,23 @@ body {
 }
 
 #ecoStats p{
-    color: #95aaaa;
+    color: #a0a2a2;
+    font-weight: bold;
+}
+
+#ecoStats span{
+    font-weight: normal;
 }
 
 #additionalLinks a{
-    color: #87CEEB;
+    color: #e1f3fa;
     text-decoration: none;
     display: block;
     line-height: 1.8;
 }
 
 #additionalLinks a:hover{
-    color: red;
+    color: #ff99d6;
     text-decoration: underline;
 }
 
@@ -65,7 +79,7 @@ body {
 }
 
 .moreInfo a:hover{
-    color: red;
+    color: #ff99d6;
     text-decoration: underline;
 }
 
@@ -75,7 +89,7 @@ body {
     text-decoration: none;
 }
 .footer a:hover{
-    color: red;
+    color: #ff99d6;
     text-decoration: underline;
 }
 
@@ -98,7 +112,7 @@ body {
 }
 
 .header a:hover{
-		color: red;
+		color: #ff99d6;
 		text-decoration: underline;
 }
 
@@ -136,7 +150,7 @@ body {
 }
 
 .header nav a:hover{
-    color: red !important;
+    color: #ff99d6 !important;
     text-decoration: underline;
 }
 
@@ -197,13 +211,13 @@ button{
 }
 
 .post-title a{
-    color: #87CEEB;
+    color: #e1f3fa;
     text-decoration: none;
     display: block;
 }
 
 .post-title a:hover{
-    color: red;
+    color: #ff99d6;
 	text-decoration: underline;
 }
 
@@ -235,8 +249,8 @@ button{
     }
 }
 
-.gform_wrapper .gfield_required{
-    color: red !important;
+.gform_wrapper .gfield_requiff99d6{
+    color: #ff99d6 !important;
 }
 
 .gform_description{
@@ -264,14 +278,14 @@ button{
 }
 
 .aboutContent a{
-    color: #87CEEB;
+    color: #e1f3fa;
     text-decoration: none;
     display: block;
     line-height: 1.8;
 }
 
 .aboutContent a:hover{
-    color: red;
+    color: #ff99d6;
     text-decoration: underline;
 }
 
@@ -314,7 +328,7 @@ button{
 }
 
 .thumb:hover {
-    border: 1px solid #87CEEB;
+    border: 1px solid #e1f3fa;
     border-radius: 4px;
     transform: perspective(10px) translateZ(3px);
     transition-duration: 0.3s;
@@ -353,7 +367,7 @@ button{
         width: 80%;
         order: 2;
     }
-    #featuredImage{
+    #featuff99d6Image{
         width: 100%;
     }
     .showAll{
