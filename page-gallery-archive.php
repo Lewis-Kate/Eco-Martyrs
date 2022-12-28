@@ -1,4 +1,4 @@
-<?php /*Template Name: Archive Gallery */ ?>
+<?php /*Template Name: Gallery Archive */ ?>
 <?php get_header(); ?>
 
 <h1 class="archive">Archive Gallery</h1>

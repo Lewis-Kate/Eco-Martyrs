@@ -46,7 +46,7 @@ foreach ( $understrap_includes as $file ) {
 function load_scripts(){
 	wp_enqueue_script( 'wp-api' );
 	wp_enqueue_script( 'slideshow', get_template_directory_uri(  ) . '/src/js/slideshow.js', array( 'wp-api' ) , '1.0.0', true);
-	wp_enqueue_script( 'archiveGallery', get_template_directory_uri(  ) . '/src/js/archiveGallery.js', array( 'wp-api' ) , '1.0.0', true);
+	//wp_enqueue_script( 'secondGallery', get_template_directory_uri(  ) . '/src/js/secondGallery.js', array( 'wp-api' ) , '1.0.0', true);
 	wp_enqueue_style( 'styles', get_template_directory_uri(  ) . '/src/style/styles.css', array(), '1.0.0');
 	gravity_form_enqueue_scripts( 1, true );
 }
@@ -90,15 +90,14 @@ function create_archive() {
             ),
             'public' => true,
             'has_archive' => true,
-            'rewrite' => array('slug' => 'archive galleries'),
+            'rewrite' => array('slug' => 'archive gallery'),
             'show_in_rest' => true,
-			'menu_icon' => 'dashicons-admin-site',
-			'supports' => array( 'thumbnail' )
+			'menu_icon' => 'dashicons-format-gallery',
+			'supports' => array( 'title', 'thumbnail' )
  
         )
     );
-	add_post_type_support( 'archive_gallery', 'thumbnail' );
+	add_post_type_support( 'archive gallery', 'thumbnail' );
 }
 // Hooking up our function to theme setup
 add_action( 'init', 'create_archive' );
-
