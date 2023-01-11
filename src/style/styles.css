@@ -9,9 +9,10 @@ body p{
 }
 
 /*archive gallery*/
-.archive{
+h1.archive{
     text-align: center;
 }
+
 
 /*show all page style*/
 .showAll{

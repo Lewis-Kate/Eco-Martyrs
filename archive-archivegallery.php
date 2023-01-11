@@ -3,8 +3,8 @@
 
 <h1 class="archive">Archive Gallery</h1>
 <div class="galleryButton">
-<button onclick="showPreviousSlide()"><i class="fas fa-chevron-left fa-2x"></i></button>
-<button id="showNext" class="rightButton" onclick="showNextSlide()"><i class="fas fa-chevron-right fa-2x"></i></button>
+<button onclick="previousSlide()"><i class="fas fa-chevron-left fa-2x"></i></button>
+<button id="showNext" class="rightButton" onclick="nextSlide()"><i class="fas fa-chevron-right fa-2x"></i></button>
 </div>
 
 <div class="showAll">
@@ -17,13 +17,7 @@
             <p>Country: <span id="archiveCountry"></span> </p>
             <p>Date of Death: <span id="archiveDeath"></p>
             <p>Portrait Artist: <span id="archiveArtist"></p>
-            <p>Sound Artists: <span id="archiveArtist"></p>
             <p>Ecomartyr Bio: <span id="archiveBio"></span></p>
-            <p>Links for further reading: <span id="archiveLinks"></p><br />
-        </div>
-
-        <div class="audioPlayer">
-            <audio controls autoplay loop id="audio"></audio>
         </div>
 
         <div class="moreInfo">
