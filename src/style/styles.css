@@ -258,6 +258,20 @@ button{
     color: #95aaaa;
 }
 
+/*archive gallery*/
+.archive_card{
+    display: flex;
+    flex-flow: column nowrap;
+    border: #FFED5F solid 2px;
+    border-radius: 20px;
+    width: 45%;
+}
+
+.archive_info{
+    margin: 2%;
+    width: 100%;
+}
+
 /*About Pages*/
 .about{
     text-align: center;
