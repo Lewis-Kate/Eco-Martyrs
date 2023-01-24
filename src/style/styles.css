@@ -259,12 +259,16 @@ button{
 }
 
 /*archive gallery*/
-.archive_card{
+.archive_grid{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.archive_card{   
     display: flex;
     flex-flow: column nowrap;
-    border: #FFED5F solid 2px;
-    border-radius: 20px;
     width: 45%;
+    padding: 1em;
 }
 
 .archive_info{

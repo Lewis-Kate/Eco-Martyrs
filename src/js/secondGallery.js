@@ -73,8 +73,8 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/archivegallery?&status=
     image.src = post._embedded['wp:featuredmedia']['0'].source_url;  
 
     //Audio   
-    let curr_track = document.getElementById("audio"); 
-    curr_track.src = post.acf.archive_audio_file;
+    //let curr_track = document.getElementById("audio"); 
+    //curr_track.src = post.acf.archive_audio_file;
 
     }
 
