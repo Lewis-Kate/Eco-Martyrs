@@ -46,7 +46,7 @@ foreach ( $understrap_includes as $file ) {
 function load_scripts(){
 	wp_enqueue_script( 'wp-api' );
 	wp_enqueue_script( 'slideshow', get_template_directory_uri(  ) . '/src/js/slideshow.js', array( 'wp-api' ) , '1.0.0', true);
-	wp_enqueue_script( 'secondGallery', get_template_directory_uri(  ) . '/src/js/secondGallery.js', array( 'wp-api' ) , '1.0.0', true);
+	//wp_enqueue_script( 'secondGallery', get_template_directory_uri(  ) . '/src/js/secondGallery.js', array( 'wp-api' ) , '1.0.0', true);
 	wp_enqueue_style( 'styles', get_template_directory_uri(  ) . '/src/style/styles.css', array(), '1.0.0');
 	gravity_form_enqueue_scripts( 1, true );
 }
@@ -105,3 +105,39 @@ function create_archive() {
 // Hooking up our function to theme setup
 add_action( 'init', 'create_archive');
 
+//gallery archive loop
+function presentSlide(){
+	$args = array(
+	  'posts_per_page' => -1,
+	  'post_type'   => 'archivegallery',
+	  'post_status' => 'publish',
+	  'order' => 'ASC',
+	  'orderby' => 'title',
+	  );
+	  $html = '';
+	  $the_query = new WP_Query( $args );
+					  if( $the_query->have_posts() ):
+						while ( $the_query->have_posts() ) : $the_query->the_post();
+						  $html .='<div class="archive_grid">';
+						  $html .='<div class="archive_card">';
+						  $html .= '<div class="showAll">';
+						  $html .= '<div class="archive_info">';
+						  $html .= '<div id="ecoStats">';
+						  $html .= '<img id="archiveImage" src=“ . get_field(‘image’) . ”/>';
+
+						  $html .= '<p>Ecomartyr Name:<span>' . get_the_title() . '</span></p>';
+						  $html .= '<p>Sex: <span> ' . get_field('archive_sex') . '</span></p>';
+						  $html .= '<p>Country: <span> ' . get_field('archive_country') . '</span> </p>';
+						  $html .= '<p>Date of Death:<span> ' . get_field('archive_date_of_death') . '</span> </p>';
+						  $html .= '<p>Portrait Artist: <span> ' . get_field('archive_portrait_artist') . '</span> </p>';
+						  $html .= '<p>Ecomartyr Bio: <span> ' . get_field('archive_ecomartyr_bio') . '</span> </p>';
+						  $html .= '</div>';
+						  $html .= '</div>';
+						  $html .= '</div>';
+						  $html .= '</div>';
+						endwhile;
+					endif;
+	wp_reset_query();  // Restore global post data stomped by the_post().
+   return $html;
+   }
+						  

@@ -79,8 +79,13 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/archivegallery?&status=
     }
 
 
+    //Loop to show posts on archive gallery
+   // if(presentSlide + 1 > fields.length){
+    //  presentSlide = 0;
+   //  };
+
    //Show Next Slide
-  function nextSlide() {
+  /*(function nextSlide() {
     //increment presentSlide and then call showView again with the new value of presentSlide
     presentSlide++
     if(presentSlide + 1 > fields.length){
@@ -96,7 +101,7 @@ fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/archivegallery?&status=
       presentSlide = fields.length - 1
     }
     showView(presentSlide);
-  }
+  }*/
 
     
 
