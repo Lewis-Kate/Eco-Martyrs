@@ -3,7 +3,7 @@ let currentSlide = 0;
 
 
 //connet to API and create console log the data ecomartrys
-fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/ecomartyrs?&status=publish&per_page=99&_embed=true')
+fetch('https://rampages.us/eco-martyrs/wp-json/wp/v2/ecomartyrs?&status=publish&per_page=99&_embed=true')
     .then(function(response) {
         if (!response.ok) {
             throw Error("Failure to Load");

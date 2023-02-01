@@ -5,7 +5,7 @@ let presentSlide = 0;
 
 
 //connet to API and create console log the data archive
-fetch('https://multisite.local/eco-martyrs/wp-json/wp/v2/archivegallery?&status=publish&per_page=99&_embed=true')
+fetch('https://rampages.us/eco-martyrs/wp-json/wp/v2/archivegallery?&status=publish&per_page=99&_embed=true')
     .then(function(respond) {
         if (!respond.ok) {
             throw Error("Failure to Load");

@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
 <div class="galleryButton">
-    <button onclick="location.href='https://multisite.local/eco-martyrs/showall/'" type="button"><i
+    <button onclick="location.href='https://rampages.us/eco-martyrs/showall/'" type="button"><i
             class="fas fa-chevron-left fa-2x"></i></button>
 
-    <button class="rightButton" onclick="location.href='https://multisite.local/eco-martyrs/showall/'" type="button"><i
+    <button class="rightButton" onclick="location.href='https://rampages.us/eco-martyrs/showall/'" type="button"><i
             class="fas fa-chevron-right fa-2x"></i></button>
 </div>
 
@@ -25,7 +25,7 @@ if($query->have_posts()):
 ?>
 
     <div class="imageGrid">
-        <a href="https://multisite.local/eco-martyrs/showall/"><img
+        <a href="https://rampages.us/eco-martyrs/showall/"><img
                 src="<?php echo get_the_post_thumbnail_url( );?>"></a>
         <h3><?php the_title();?></h3>
     </div>

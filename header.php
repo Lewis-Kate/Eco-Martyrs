@@ -37,7 +37,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
         <nav id="main-nav" class="navbar navbar-expand-md navbar-dark" aria-labelledby="main-nav-label">
 
-            <h1><a href="http://multisite.local/eco-martyrs/">Eco-Martyrs</a><img
+            <h1><a href="http://rampages.us/eco-martyrs/">Eco-Martyrs</a><img
                     src="/wp-content/themes/eco-martyrs/src/img/globe.svg"></h1>
 
             <h2 id="main-nav-label" class="sr-only">
