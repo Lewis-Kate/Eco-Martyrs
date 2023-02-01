@@ -4,8 +4,8 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
-body p{
-    font-size: 1.1em;
+body p, body span{
+    font-size: 1.3em;
 }
 
 /*archive gallery*/
@@ -47,12 +47,13 @@ h1.archive{
 }
 
 #ecoStats p{
-    color: #a0a2a2;
+    color: #9ea3a3;
     font-weight: bold;
 }
 
 #ecoStats span{
     font-weight: normal;
+    color: #dce3e3;
 }
 
 #additionalLinks a{
@@ -72,7 +73,7 @@ h1.archive{
     text-decoration: none;
     display: block;
     line-height: 1.8;
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 
 .moreInfo{
@@ -108,17 +109,18 @@ h1.archive{
 
 .header nav h1 a{
     font-family: 'Inknut Antiqua', serif !important;
-	font-size: 1em !important;
+	font-size: 1.2em !important;
     color: #FFED5F !important;
 }
 
 .header a:hover{
 		color: #ff99d6;
 		text-decoration: underline;
+        background-color: #1e2d32;
 }
 
 .header p{
-	font-size: 1.2em;
+	font-size: 1.3em;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
 }
@@ -143,7 +145,7 @@ h1.archive{
 }
 
 .header nav a{
-    font-size: 1em;
+    font-size: 1.1em;
     color: #e8e8e8 !important;
     text-decoration: none;
     padding-right: .3em;
@@ -208,7 +210,7 @@ button{
 
 .post-title{
     text-align: justify;
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 
 .post-title a{
@@ -259,13 +261,23 @@ button{
 }
 
 /*archive gallery*/
-.archive_grid{
-    display: grid;
-    grid-template-columns: 2 (1fr 1fr);
-    /*grid-auto-rows: 45%;*/
+.archive_showAll{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
 }
 
+.archive_showAll img{
+    padding: 1em;
+    width: 500px !important;
+}
 
+.archive_showAll hr{
+    border: rgba(255, 237, 95, .8) solid 2px;
+    margin: 0 10px;
+    border-radius: 10px;
+}
 
 .archive_info{
     margin: 2%;
@@ -362,10 +374,10 @@ button{
         display: none;
     }
     .header nav h1 a{
-        font-size: .8em !important;
+        font-size: .9em !important;
     }
     .subHead h5{
-        font-size: 1em;
+        font-size: 1.1em;
     }
     button.navbar-toggler{
         height: auto !important;

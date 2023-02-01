@@ -1,0 +1,30 @@
+{
+  "name": "ecomartyrs",
+  "version": "1.0.0",
+  "description": "visual and sound artists pay tribute to the fallen around the globe",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "scripts": {
+    "test": "no test specified",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RVA-ALT-Lab/eco-martyrs.git"
+  },
+  "keywords": [
+    "[]"
+  ],
+  "author": "VCU Online - Kate Lewis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RVA-ALT-Lab/eco-martyrs/issues"
+  },
+  "homepage": "https://github.com/RVA-ALT-Lab/eco-martyrs#readme"
+}
