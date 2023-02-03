@@ -26,7 +26,7 @@
         </div>
 
         <div class="moreInfo">
-            <a href="http://multisite.local/eco-martyrs/contact/">Please click here to provide more information about this Ecomartyr.</a>
+            <a href="http://rampages.us/eco-martyrs/contact/">Please click here to provide more information about this Ecomartyr.</a>
         </div>
     </div>
 
