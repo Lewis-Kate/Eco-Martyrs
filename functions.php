@@ -118,7 +118,7 @@ function presentSlide(){
 					  if( $the_query->have_posts() ):
 						while ( $the_query->have_posts() ) : $the_query->the_post();
 										 
-						  $html .= '<div class="stats_and_player">';
+					
 						  $html .= '<div id="ecoStats">'; 
 						  $html .= '<p>Ecomartyr Name: <span>' . get_the_title() . '</span></p>';
 						  $html .= '<p>Sex: <span> ' . get_field('sex') . '</span></p>';
@@ -129,7 +129,7 @@ function presentSlide(){
 						  $html .= '<p>Ecomartyr Bio: <span> ' . get_field('ecomartyr_bio') . '</span> </p>';
 						  $html .= '<p>Links for further reading: <span> ' . get_field('additional_links') . '</span> </p>';
 						  $html .= '</div>';
-						  $html .= '</div>';
+					
 										
 						endwhile;
 					endif;
@@ -157,6 +157,29 @@ endif;
 wp_reset_query();  // Restore global post data stomped by the_post().
 return $html;
 }
+
+
+  //gallery audio ecomartyrs
+  function ecoAudio(){
+	$args = array(
+	 'posts_per_page' => 1,
+	 'post_type'   => 'ecomartyrs',
+	 'post_status' => 'publish',
+	 'order' => 'ASC',
+	 'orderby' => 'title',
+	 );
+	 $html = '';
+	 $the_query = new WP_Query( $args );
+					 if( $the_query->have_posts() ):
+					   while ( $the_query->have_posts() ) : $the_query->the_post();
+	$html .= ' <audio controls autoplay loop id="audio">' . '</audio>';
+	
+ endwhile;
+ endif;
+ wp_reset_query();  // Restore global post data stomped by the_post().
+ return $html;
+ }
+
 	 
 
    //gallery archive loop

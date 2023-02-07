@@ -8,15 +8,30 @@
 </div>
 
 <div class="showAll">
+<div class="stats_and_player">'
     <?php echo presentSlide();?>
+    
 
+    <div class="audioPlayer">
+            <?php echo ecoAudio() ?>
+        </div>
+
+        <div class="moreInfo">
+            <a href="http://rampages.us/eco-martyrs/contact/">Please click here to provide more information about this Ecomartyr.</a>
+        </div>
+</div>
 
   
 <div class="fit_to_window">
     <?php  echo ecoImage();?>
   </div>
+</div>
 
-  </div>
+
+
+  
+
+
 <?php get_footer(); ?>
 
 
