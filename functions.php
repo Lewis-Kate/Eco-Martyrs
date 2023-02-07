@@ -45,7 +45,7 @@ foreach ( $understrap_includes as $file ) {
 
 function load_scripts(){
 	wp_enqueue_script( 'wp-api' );
-	wp_enqueue_script( 'slideshow', get_template_directory_uri(  ) . '/src/js/slideshow.js', array( 'wp-api' ) , '1.0.0', true);
+	//wp_enqueue_script( 'slideshow', get_template_directory_uri(  ) . '/src/js/slideshow.js', array( 'wp-api' ) , '1.0.0', true);
 	wp_enqueue_style( 'styles', get_template_directory_uri(  ) . '/src/style/styles.css', array(), '1.0.0');
 	gravity_form_enqueue_scripts( 1, true );
 }
@@ -106,6 +106,61 @@ add_action( 'init', 'create_archive');
 
 //gallery archive loop
 function presentSlide(){
+	$args = array(
+	  'posts_per_page' => 1,
+	  'post_type'   => 'ecomartyrs',
+	  'post_status' => 'publish',
+	  'order' => 'ASC',
+	  'orderby' => 'title',
+	  );
+	  $html = '';
+	  $the_query = new WP_Query( $args );
+					  if( $the_query->have_posts() ):
+						while ( $the_query->have_posts() ) : $the_query->the_post();
+										 
+						  $html .= '<div class="stats_and_player">';
+						  $html .= '<div id="ecoStats">'; 
+						  $html .= '<p>Ecomartyr Name: <span>' . get_the_title() . '</span></p>';
+						  $html .= '<p>Sex: <span> ' . get_field('sex') . '</span></p>';
+						  $html .= '<p>Country: <span> ' . get_field('country') . '</span> </p>';
+						  $html .= '<p>Date of Death:<span> ' . get_field('date_of_death') . '</span> </p>';
+						  $html .= '<p>Portrait Artist: <span> ' . get_field('portrait_artist') . '</span> </p>';
+						  $html .= '<p>Sound Artists: <span> ' . get_field('sound_artist') . '</span> </p>';
+						  $html .= '<p>Ecomartyr Bio: <span> ' . get_field('ecomartyr_bio') . '</span> </p>';
+						  $html .= '<p>Links for further reading: <span> ' . get_field('additional_links') . '</span> </p>';
+						  $html .= '</div>';
+						  $html .= '</div>';
+										
+						endwhile;
+					endif;
+	wp_reset_query();  // Restore global post data stomped by the_post().
+   return $html;
+   }
+
+   //gallery image ecomartyrs
+function ecoImage(){
+   $args = array(
+	'posts_per_page' => 1,
+	'post_type'   => 'ecomartyrs',
+	'post_status' => 'publish',
+	'order' => 'ASC',
+	'orderby' => 'title',
+	);
+	$html = '';
+	$the_query = new WP_Query( $args );
+					if( $the_query->have_posts() ):
+					  while ( $the_query->have_posts() ) : $the_query->the_post();
+   $html .= '<img id="featuredImage" src=' .  get_the_post_thumbnail_url($post_id, 'full')  . '>';
+   
+endwhile;
+endif;
+wp_reset_query();  // Restore global post data stomped by the_post().
+return $html;
+}
+	 
+
+   //gallery archive loop
+function nextSlide(){
 	$args = array(
 	  'posts_per_page' => -1,
 	  'post_type'   => 'archivegallery',

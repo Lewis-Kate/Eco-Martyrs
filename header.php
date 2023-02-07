@@ -94,13 +94,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 				?>
             <?php if ( 'container' === $container ) : ?>
 
+                
 
     </div><!-- .container -->
-    <?php endif; ?>
-    
+        
     <div class="subHead">
-        <h5>Visual and sound artists pay tribute to the fallen from around the globe</h5>
+        <h3>Visual and sound artists pay tribute to the fallen from around the globe</h3>
     </div>
+
+    <?php endif; ?>
 
     </nav><!-- .site-navigation -->
 

@@ -8,35 +8,39 @@
 </div>
 
 <div class="showAll">
-   
-    <div class="stats_and_player">
-        <div id="ecoStats">
-            <p>Ecomartyr Name: <span id="ecoMartyrName"></span></p>
-            <p>Sex: <span id="ecoMartyrSex"></span></p>
-            <p>Country: <span id="ecoMartyrCountry"></span> </p>
-            <p>Date of Death: <span id="dateOfDeath"></p>
-            <p>Portrait Artist: <span id="portraitArtist"></p>
-            <p>Sound Artists: <span id="soundArtist"></p>
-            <p>Ecomartyr Bio: <span id="ecomartyrBio"></span></p>
-            <p>Links for further reading: <span id="additionalLinks"></p><br />
-        </div>
+    <?php echo presentSlide();?>
 
-        <div class="audioPlayer">
-            <audio controls autoplay loop id="audio"></audio>
-        </div>
-
-        <div class="moreInfo">
-            <a href="http://rampages.us/eco-martyrs/contact/">Please click here to provide more information about this Ecomartyr.</a>
-        </div>
-    </div>
-
-    <div class="fit_to_window">
-        <img id="featuredImage">
-    </div>
 
   
+<div class="fit_to_window">
+    <?php  echo ecoImage();?>
+  </div>
 
-</div>
-
-
+  </div>
 <?php get_footer(); ?>
+
+
+<script>
+const posts=[];
+let currentSlide = 0;
+
+   //Show Next Slide
+  function showNextSlide() {
+    //increment currentSlide and then call renderView again with the new value of currentSlide
+    currentSlide++
+    if(currentSlide + 1 > posts.length){
+      currentSlide = 0
+    }
+  renderView(currentSlide);
+   }
+
+  //Show Previous Slide
+  function showPreviousSlide() {
+    --currentSlide
+    if(currentSlide < 0 ){
+      currentSlide = posts.length - 1
+    }
+    renderView(currentSlide);
+  }
+
+    </script>

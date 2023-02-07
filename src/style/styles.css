@@ -4,8 +4,12 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
-body p, body span{
-    font-size: 1.3em;
+body p{
+    font-size: 1.7em;
+}
+
+body span{
+    font-size: 1.3em;;
 }
 
 /*archive gallery*/
@@ -27,14 +31,14 @@ h1.archive{
     color: #fbfcfc;
 }
 
-
+ 
 .fit_to_window{
     height: calc(100vh);
     width: 50%;
 }
 
-#featuff99d6Image{
-    object-fit: contain;
+#featuredImage{
+    object-fit: scale-down;
 }
 
 .stats_and_player {
@@ -109,7 +113,7 @@ h1.archive{
 
 .header nav h1 a{
     font-family: 'Inknut Antiqua', serif !important;
-	font-size: 1.2em !important;
+	font-size: 1.5em !important;
     color: #FFED5F !important;
 }
 
@@ -120,17 +124,21 @@ h1.archive{
 }
 
 .header p{
-	font-size: 1.3em;
+	font-size: 1.7em;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
 }
 
 .header img{
     padding-right: 1em;
+    width: 150px;
 }
 
 .subHead{
     text-align: center;
+    font-size: 1.5em !important;
+    color: #FFED5F !important;
+    margin-top: -40px;
 }
 
 .subHead h5{
@@ -145,10 +153,10 @@ h1.archive{
 }
 
 .header nav a{
-    font-size: 1.1em;
+    font-size: 1.5em;
     color: #e8e8e8 !important;
     text-decoration: none;
-    padding-right: .3em;
+    padding-right: .5em;
     font-family: 'Quicksand', sans-serif;
 }
 
