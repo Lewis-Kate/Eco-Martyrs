@@ -104,6 +104,7 @@ function create_archive() {
 // Hooking up our function to theme setup
 add_action( 'init', 'create_archive');
 
+
 //gallery archive loop
 function presentSlide(){
 	$args = array(
@@ -116,8 +117,7 @@ function presentSlide(){
 	  $html = '';
 	  $the_query = new WP_Query( $args );
 					  if( $the_query->have_posts() ):
-						while ( $the_query->have_posts() ) : $the_query->the_post();
-										 
+						while ( $the_query->have_posts() ) : $the_query->the_post();								 
 					
 						  $html .= '<div id="ecoStats">'; 
 						  $html .= '<p>Ecomartyr Name: <span>' . get_the_title() . '</span></p>';
@@ -126,10 +126,8 @@ function presentSlide(){
 						  $html .= '<p>Date of Death:<span> ' . get_field('date_of_death') . '</span> </p>';
 						  $html .= '<p>Portrait Artist: <span> ' . get_field('portrait_artist') . '</span> </p>';
 						  $html .= '<p>Sound Artists: <span> ' . get_field('sound_artist') . '</span> </p>';
-						  $html .= '<p>Ecomartyr Bio: <span> ' . get_field('ecomartyr_bio') . '</span> </p>';
-						  $html .= '<p>Links for further reading: <span> ' . get_field('additional_links') . '</span> </p>';
-						  $html .= '</div>';
-					
+						  $html .= '<p>Ecomartyr Bio: <span> ' . get_field('ecomartyr_bio') . '</span> </p>';								 
+						  $html .= '</div>';			
 										
 						endwhile;
 					endif;
@@ -137,6 +135,37 @@ function presentSlide(){
    return $html;
    }
 
+//get the additional links for shawAll
+function linkLoop(){
+	$args = array(
+		'posts_per_page' => 1,
+		'post_type'   => 'ecomartyrs',
+		'post_status' => 'publish',
+		'order' => 'ASC',
+		'orderby' => 'title',
+		);
+		$html = '';	
+		//$the_query = new WP_Query( $args );	
+	//	if( $the_query->have_posts() ):
+	//		while ( $the_query->have_posts() ) : $the_query->the_post();
+
+			// check if the repeater field has rows of data
+			if( have_rows('additional_links') ):
+				// loop through the rows of data
+				while ( have_rows('additional_links') ) : the_row();
+					// display a sub field value
+					the_sub_field('link_url');
+					$html .= '<a href= '. get_sub_field('link_url', get_the_ID()) . ' target="_blank"> '. get_sub_field('link_url', get_the_ID()) .'</a>';
+				endwhile;
+			else :
+				echo 'nothing found';
+			endif;
+		//endwhile;
+	//endif;
+	wp_reset_query();  // Restore global post data stomped by the_post().
+	return $html;
+	}
+	
    //gallery image ecomartyrs
 function ecoImage(){
    $args = array(
@@ -216,4 +245,4 @@ function nextSlide(){
 	wp_reset_query();  // Restore global post data stomped by the_post().
    return $html;
    }
-						  
+ 

@@ -32,10 +32,6 @@ h1.archive{
 }
 
  
-.fit_to_window{
-    height: calc(100vh);
-    width: 50%;
-}
 
 #featuredImage{
     object-fit: scale-down;
@@ -60,14 +56,14 @@ h1.archive{
     color: #dce3e3;
 }
 
-#additionalLinks a{
+.links a{
     color: #e1f3fa;
     text-decoration: none;
     display: block;
     line-height: 1.8;
 }
 
-#additionalLinks a:hover{
+.links a:hover{
     color: #ff99d6;
     text-decoration: underline;
 }
@@ -88,6 +84,24 @@ h1.archive{
     color: #ff99d6;
     text-decoration: underline;
 }
+
+.right_side{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 40%;
+}
+
+.audioPlayer{
+    padding-top: 5em;
+}
+
+.galleryButton a{
+    color: #FFED5F;
+    margin: 0 20px;
+}
+
 
 /*footer styles*/
 .footer a{
