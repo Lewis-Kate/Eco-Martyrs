@@ -29,9 +29,7 @@ h1.archive{
 .showAll h1{
     text-align: center;
     color: #fbfcfc;
-}
-
- 
+} 
 
 #featuredImage{
     object-fit: scale-down;
@@ -100,6 +98,30 @@ h1.archive{
 .galleryButton a{
     color: #FFED5F;
     margin: 0 20px;
+}
+
+#post-cs .ps-box{
+    background: #1e2d32;
+}
+
+#post-cs.carousel4{
+    width: 1500px;
+    height: 500px;
+    justify-content: center;;
+}
+
+#post-cs .ps-readmore{
+    color: #1e2d32;
+    background-color:#FFED5F;
+    font-size: 1.1em;
+}
+
+#post-cs.carousel4 img.ps-image{
+    max-width: 250px !important;
+}
+
+.ps-center{
+    margin-top: 100px;   
 }
 
 

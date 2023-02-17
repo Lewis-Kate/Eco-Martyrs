@@ -54,7 +54,7 @@ add_action( 'wp_enqueue_scripts', 'load_scripts' );
 
 
 // Our custom post type function
-function create_posttype() {
+function create_ecomartyrs() {
  
     register_post_type( 'ecomartyrs',
     // CPT Options
@@ -74,11 +74,9 @@ function create_posttype() {
     );
 	add_post_type_support( 'ecomartyrs', 'thumbnail' );
 }
+
 // Hooking up our function to theme setup
-add_action( 'init', 'create_posttype' );
-
-
-
+add_action( 'init', 'create_ecomartyrs');
 
 // Our custom post type function
 function create_archive() {

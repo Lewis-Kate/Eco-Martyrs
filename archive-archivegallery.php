@@ -12,7 +12,7 @@ get_header(); ?>
 
  
     
-<?php echo presentSlide();?>
+<?php echo nextSlide();?>
           
 </div>  
             
