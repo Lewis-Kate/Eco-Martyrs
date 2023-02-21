@@ -103,35 +103,6 @@ function create_archive() {
 add_action( 'init', 'create_archive');
 
 
-//gallery archive loop
-function presentSlide(){
-	$args = array(
-	  'posts_per_page' => 1,
-	  'post_type'   => 'ecomartyrs',
-	  'post_status' => 'publish',
-	  'order' => 'ASC',
-	  'orderby' => 'title',
-	  );
-	  $html = '';
-	  $the_query = new WP_Query( $args );
-					  if( $the_query->have_posts() ):
-						while ( $the_query->have_posts() ) : $the_query->the_post();								 
-					
-						  $html .= '<div id="ecoStats">'; 
-						  $html .= '<p>Ecomartyr Name: <span>' . get_the_title() . '</span></p>';
-						  $html .= '<p>Sex: <span> ' . get_field('sex') . '</span></p>';
-						  $html .= '<p>Country: <span> ' . get_field('country') . '</span> </p>';
-						  $html .= '<p>Date of Death:<span> ' . get_field('date_of_death') . '</span> </p>';
-						  $html .= '<p>Portrait Artist: <span> ' . get_field('portrait_artist') . '</span> </p>';
-						  $html .= '<p>Sound Artists: <span> ' . get_field('sound_artist') . '</span> </p>';
-						  $html .= '<p>Ecomartyr Bio: <span> ' . get_field('ecomartyr_bio') . '</span> </p>';								 
-						  $html .= '</div>';			
-										
-						endwhile;
-					endif;
-	wp_reset_query();  // Restore global post data stomped by the_post().
-   return $html;
-   }
 
 //get the additional links for shawAll
 function linkLoop(){
@@ -139,7 +110,7 @@ function linkLoop(){
 		'posts_per_page' => 1,
 		'post_type'   => 'ecomartyrs',
 		'post_status' => 'publish',
-		'order' => 'ASC',
+		'order' => 'DATE',
 		'orderby' => 'title',
 		);
 		$html = '';	
@@ -152,7 +123,7 @@ function linkLoop(){
 				// loop through the rows of data
 				while ( have_rows('additional_links') ) : the_row();
 					// display a sub field value
-					the_sub_field('link_url');
+					//the_sub_field('link_url');
 					$html .= '<a href= '. get_sub_field('link_url', get_the_ID()) . ' target="_blank"> '. get_sub_field('link_url', get_the_ID()) .'</a>';
 				endwhile;
 			else :
@@ -163,49 +134,8 @@ function linkLoop(){
 	wp_reset_query();  // Restore global post data stomped by the_post().
 	return $html;
 	}
-	
-   //gallery image ecomartyrs
-function ecoImage(){
-   $args = array(
-	'posts_per_page' => 1,
-	'post_type'   => 'ecomartyrs',
-	'post_status' => 'publish',
-	'order' => 'ASC',
-	'orderby' => 'title',
-	);
-	$html = '';
-	$the_query = new WP_Query( $args );
-					if( $the_query->have_posts() ):
-					  while ( $the_query->have_posts() ) : $the_query->the_post();
-   $html .= '<img id="featuredImage" src=' .  get_the_post_thumbnail_url($post_id, 'full')  . '>';
-   
-endwhile;
-endif;
-wp_reset_query();  // Restore global post data stomped by the_post().
-return $html;
-}
 
 
-  //gallery audio ecomartyrs
-  function ecoAudio(){
-	$args = array(
-	 'posts_per_page' => 1,
-	 'post_type'   => 'ecomartyrs',
-	 'post_status' => 'publish',
-	 'order' => 'ASC',
-	 'orderby' => 'title',
-	 );
-	 $html = '';
-	 $the_query = new WP_Query( $args );
-					 if( $the_query->have_posts() ):
-					   while ( $the_query->have_posts() ) : $the_query->the_post();
-	$html .= ' <audio controls autoplay loop id="audio">' . '</audio>';
-	
- endwhile;
- endif;
- wp_reset_query();  // Restore global post data stomped by the_post().
- return $html;
- }
 
 	 
 

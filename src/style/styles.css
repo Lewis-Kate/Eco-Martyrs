@@ -6,6 +6,7 @@ body {
 
 body p{
     font-size: 1.7em;
+    margin-top: 10px !important;
 }
 
 body span{
@@ -17,51 +18,47 @@ h1.archive{
     text-align: center;
 }
 
-
-/*show all page style*/
-.showAll{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
-    margin: .8em;
+/*single*/
+.wrapper{
+ display: flex;
+ flex-flow: row;
+ justify-content: center;
+ align-items: center;
 }
 
-.showAll h1{
-    text-align: center;
-    color: #fbfcfc;
-} 
-
-#featuredImage{
-    object-fit: scale-down;
+.leftSide{
+    margin-right: 60px;
+    max-width: 60%;
 }
 
-.stats_and_player {
-    margin: auto;
-    width: 60%;
+.single_title{
+    font-family: 'Inknut Antiqua', serif !important;
+	font-size: 2.3em !important;
+    color: rgba(255, 237, 95, .8) !important;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
 }
 
-#ecoStats{
-    padding-right: .8em;
-}
 
-#ecoStats p{
+.wrapper p{
     color: #9ea3a3;
     font-weight: bold;
 }
 
-#ecoStats span{
+.wrapper span{
     font-weight: normal;
     color: #dce3e3;
 }
 
-.links a{
-    color: #e1f3fa;
+.rightSide a{
+    color: #cc7aab;
     text-decoration: none;
     display: block;
     line-height: 1.8;
+    margin-top: 10px;
 }
 
-.links a:hover{
+.rightSide a:hover{
     color: #ff99d6;
     text-decoration: underline;
 }
@@ -88,7 +85,6 @@ h1.archive{
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-    width: 40%;
 }
 
 .audioPlayer{
@@ -214,12 +210,9 @@ button{
 
 /*Home Page Grid/Image Gallery*/
 .container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: [row1-start] auto [row1-end] auto [third-line] auto [last-line];
-    column-gap: 25px;
-    row-gap: 20px;
-    object-fit: contain;
+    display: flex;
+    flex-flow: row nowrap;
+    max-width: 1500px !important;
 }
 
 .container img{
@@ -231,10 +224,6 @@ button{
 }
 
 /*taxonomy pages*/
-.wrapper{
-   width: 950px;
-   margin: auto;
-}
 
 .primary-content{  
     display: grid;
