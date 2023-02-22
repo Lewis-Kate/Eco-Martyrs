@@ -34,18 +34,26 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<img id="featuredImage" src="<?php echo get_the_post_thumbnail_url($post_id, 'full' )?>" >
 							<audio controls autoplay loop id="audio" src="<?php echo get_field('audio_file')?>"></audio>
 							<p>Additional Links:</p>
-							<a href="<?php echo get_sub_field('link_url', get_the_ID())?>" target="_blank">
+							<a href="<?php echo get_sub_field('link_url')?>" target="_blank">
 								<div class="moreInfo">
 									<a href="https://rampages.us/eco-martyrs/contact/">Please click here to provide more information about this Ecomartyr.</a>
 								</div>
 
 						</div>	
-
-				
+						
 			
 		</div><!-- #content -->
 
 </div><!-- #error-404-wrapper -->
+
+<div class="galleryButton">
+	<div class="galleryButton1">
+<?php previous_post_link(); ?>  
+</div>
+<div class="galleryButton2">  
+   <?php next_post_link(); ?>				
+</div>
+</div>
 
 <?php
 get_footer();

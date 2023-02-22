@@ -5,7 +5,7 @@ body {
 }
 
 body p{
-    font-size: 1.7em;
+    font-size: 1.5em;
     margin-top: 10px !important;
 }
 
@@ -91,10 +91,26 @@ h1.archive{
     padding-top: 5em;
 }
 
-.galleryButton a{
-    color: #FFED5F;
-    margin: 0 20px;
+
+.galleryButton{
+    font-size: 1.7em;
+    margin: 10px;
+    color: #1e2d32;
+    background-color: #fbfcfc;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
 }
+
+.galleryButton a{
+    color:#1e2d32;
+}
+
+.galleryButton a:hover{
+     color: #ff99d6;
+ }
 
 #post-cs .ps-box{
     background: #1e2d32;
