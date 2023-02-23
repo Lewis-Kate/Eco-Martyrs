@@ -5,7 +5,7 @@ body {
 }
 
 body p{
-    font-size: 1.5em;
+    font-size: 1.4em;
     margin-top: 10px !important;
 }
 
@@ -28,7 +28,7 @@ h1.archive{
 
 .leftSide{
     margin-right: 60px;
-    max-width: 60%;
+    max-width: 55%;
 }
 
 .single_title{
@@ -63,6 +63,11 @@ h1.archive{
     text-decoration: underline;
 }
 
+.additional_links a{
+    padding-bottom: 2em;
+    font-size: 1.3em;
+}
+
 .moreInfo a{
     color: #FFED5F;
     text-decoration: none;
@@ -87,8 +92,13 @@ h1.archive{
     align-items: center;
 }
 
-.audioPlayer{
-    padding-top: 5em;
+.audio{
+    padding: 3em 0;
+}
+
+#audio{
+    width: 100%;
+    border: 5px solid #ff99d6;    
 }
 
 

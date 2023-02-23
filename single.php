@@ -32,9 +32,36 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						<div class="rightSide">
 							<img id="featuredImage" src="<?php echo get_the_post_thumbnail_url($post_id, 'full' )?>" >
-							<audio controls autoplay loop id="audio" src="<?php echo get_field('audio_file')?>"></audio>
+								<div class="audio">
+									<audio controls autoplay muted loop id="audio" src="<?php echo get_field('audio_file')?>"></audio>
+								</div>
+
+						<div class="additional_links">	
 							<p>Additional Links:</p>
-							<a href="<?php echo get_sub_field('link_url')?>" target="_blank">
+							
+							<?php
+								// Check rows existexists.
+								if( have_rows('additional_links') ):
+
+									// Loop through rows.
+									while( have_rows('additional_links') ) : the_row();
+
+										// Load sub field value.
+										$sub_value = get_sub_field('link_url');
+										
+									// End loop.
+									endwhile;
+
+								// No value.
+								else :
+									echo "nothing found";
+								endif;
+							?>
+						
+						<a href="<?php echo $sub_value;?>" target="_blank"><?php echo $sub_value; ?></a>
+							
+					</div>
+
 								<div class="moreInfo">
 									<a href="https://rampages.us/eco-martyrs/contact/">Please click here to provide more information about this Ecomartyr.</a>
 								</div>

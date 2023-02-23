@@ -102,42 +102,7 @@ function create_archive() {
 // Hooking up our function to theme setup
 add_action( 'init', 'create_archive');
 
-
-
-//get the additional links for shawAll
-function linkLoop(){
-	$args = array(
-		'posts_per_page' => 1,
-		'post_type'   => 'ecomartyrs',
-		'post_status' => 'publish',
-		'order' => 'DATE',
-		'orderby' => 'title',
-		);
-		$html = '';	
-		//$the_query = new WP_Query( $args );	
-	//	if( $the_query->have_posts() ):
-	//		while ( $the_query->have_posts() ) : $the_query->the_post();
-
-			// check if the repeater field has rows of data
-			if( have_rows('additional_links') ):
-				// loop through the rows of data
-				while ( have_rows('additional_links') ) : the_row();
-					// display a sub field value
-					//the_sub_field('link_url');
-					$html .= '<a href= '. get_sub_field('link_url', get_the_ID()) . ' target="_blank"> '. get_sub_field('link_url', get_the_ID()) .'</a>';
-				endwhile;
-			else :
-				echo 'nothing found';
-			endif;
-		//endwhile;
-	//endif;
-	wp_reset_query();  // Restore global post data stomped by the_post().
-	return $html;
-	}
-
-
-
-	 
+ 
 
    //gallery archive loop
 function nextSlide(){
