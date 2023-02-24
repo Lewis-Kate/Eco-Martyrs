@@ -323,25 +323,32 @@ button{
 .archive_showAll{
     display: flex;
     flex-flow: row nowrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-}
+ }
 
 .archive_showAll img{
     padding: 1em;
     width: 500px !important;
 }
 
+
 .archive_showAll hr{
     border: rgba(255, 237, 95, .8) solid 2px;
     margin: 0 10px;
     border-radius: 10px;
+    margin-top: 2em;
 }
 
 .archive_info{
     margin: 2%;
     width: 100%;
 }
+
+.archive_image{
+    width: 40%;
+}
+
 
 /*About Pages*/
 .about{

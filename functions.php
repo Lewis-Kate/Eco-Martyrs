@@ -119,7 +119,9 @@ function nextSlide(){
 						while ( $the_query->have_posts() ) : $the_query->the_post();
 						  $html .='<div class="archive_card">';
 						  $html .= '<div class="archive_showAll">';
+						  $html .='<div class="archive_image">';
 						  $html .= '<img src=' .  get_the_post_thumbnail_url($post_id, 'full')  . '>';
+						  $html .= '</div>';
 						  $html .= '<div class="archive_info">';
 						  $html .= '<div id="ecoStats">'; 
 						  $html .= '<p>Ecomartyr Name: <span>' . get_the_title() . '</span></p>';
