@@ -8,7 +8,7 @@
 <div class="google_sheet">
     <h2>Eco-Martyrs Master Excel Document</h2>
     <iframe src="https://docs.google.com/spreadsheets/d/1zWTr36OdKnEYR_VQMBctDHpTptF7rsX1QHfmSQmDVtw/edit?usp=drive_link"
-        width="1050" height="900" allow="autoplay"></iframe>
+        width="1050" height="1000" allow="autoplay"></iframe>
 </div><br/><br/>
 
 <div class="about">
